@@ -1,0 +1,566 @@
+/*--------- FONTS--------- */
+@font-face {
+  font-family: "Georgia";
+  src: url(../assets/fonts/georgia/georgia-regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url(../assets/fonts/georgia/georgia-italic.ttf);
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url(../assets/fonts/georgia/georgia-bold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url(../assets/fonts/georgia/georgia-bold-italic.ttf);
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url(../assets/fonts/arial/arial-regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*--------- COLORS--------- */
+$pink-primary: #f1cdb3;
+$white: #ffffff;
+$light-s-white: #fafafa;
+$light-l: #f6f6f6;
+$grey-texts: #cdcdcd;
+$dark-l-texts: #545454;
+$dark-xl-texts: #4c4c4c;
+$dark-3xl-texts: #292929;
+
+body {
+  font-family: "Georgia";
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*--------- HEADER--------- */
+.header {
+  position: absolute;
+  width: 100%;
+  &__container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+  }
+  &__content {
+    margin-top: 1.8rem;
+  }
+  h1 {
+    margin-bottom: 0px;
+  }
+  &__logo {
+    color: $pink-primary;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 0.14rem;
+    text-decoration: none;
+  }
+  &__logo-subtitle {
+    font-family: "Arial";
+    font-size: 13px;
+    font-weight: 400;
+    color: $white;
+    letter-spacing: 0.086rem;
+    margin-left: 0.3rem;
+    margin-top: 0.5rem;
+  }
+}
+
+/* --------NAV --------*/
+.nav {
+  display: flex;
+  font-family: "Arial";
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 2.5rem;
+
+  &__link {
+    margin-left: 2.3rem;
+    color: $grey-texts;
+    text-decoration: none;
+    opacity: 0.75;
+    transition: opacity 0.1 linear;
+  }
+
+  &__link-active {
+    color: $light-s-white;
+    text-decoration: none;
+    padding-bottom: 0.3rem;
+    border-bottom: 3px solid $pink-primary;
+  }
+
+  &__link:hover {
+    opacity: 1;
+  }
+}
+
+/* --------START SCREEN-------*/
+.start__screen {
+  background-image: url(../assets/images/start-screen-gradient-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%; /* Opera 9.6+ */
+  background-size: 100%; /* Современные браузеры */
+  &__container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__content {
+    position: relative;
+  }
+  &__heading {
+    font-size: 44px;
+    font-weight: 400;
+    width: 310px;
+    color: $white;
+    line-height: 130%;
+    margin-top: 4.4rem;
+  }
+  &__contentinner {
+    margin-top: 2.7rem;
+  }
+  &__text {
+    font-family: "Arial";
+    font-size: 15px;
+    line-height: 160%;
+    width: 460px;
+    color: $grey-texts;
+    margin-bottom: 1.9rem;
+    padding-bottom: 1.5rem;
+  }
+  &__btn {
+    background-color: $pink-primary;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.6px;
+    color: $dark-3xl-texts;
+    text-decoration: none;
+    padding: 15px 50px;
+    border-radius: 100px;
+    cursor: pointer;
+  }
+  &__btn:hover {
+    background-color: #fddcc4;
+  }
+  &__img {
+    margin-top: 10.5rem;
+  }
+}
+
+/* -------ABOUT----------*/
+.about {
+  padding-bottom: 5.4rem;
+  &__inner {
+    display: flex;
+    margin-top: 4.7rem;
+    margin-left: 11rem;
+  }
+  &__img {
+    margin-right: 7.5rem;
+  }
+  &__heading {
+    font-weight: 400;
+    font-size: 35px;
+    letter-spacing: 2px;
+    line-height: 45.5px;
+    color: $dark-l-texts;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    width: 370px;
+  }
+  &__text {
+    font-family: "Arial";
+    font-weight: 400;
+    font-size: 15px;
+    color: $dark-xl-texts;
+    width: 430px;
+    line-height: 24px;
+    margin-bottom: 25px;
+  }
+}
+
+/* -------PETS------*/
+
+.pets {
+  padding-top: 6.2rem;
+  padding-bottom: 7.1rem;
+  background-color: $light-l;
+  &__heading {
+    margin-top: -1rem;
+    &__inner {
+      margin: 0 auto;
+      text-align: center;
+      width: 400px;
+      font-weight: 400;
+      font-size: 35px;
+      color: $dark-l-texts;
+      letter-spacing: 0.13rem;
+      margin-bottom: 6px;
+    }
+  }
+  .slider {
+    height: 500px;
+    &__btn {
+      border: 2px solid $pink-primary;
+      border-radius: 100px;
+      width: 52px;
+      height: 52px;
+      margin-top: 15.5rem;
+      cursor: pointer;
+    }
+    &__btn:hover {
+      background-color: $pink-primary;
+    }
+    &__wrapper {
+      width: 1200px;
+      display: flex;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .slider__card {
+      width: 270px;
+      height: 435px;
+      background-color: $white;
+      border-radius: 9px;
+      margin: 0 auto;
+      margin-top: 3.5rem;
+      cursor: url("../assets/icons/cursor.png"), auto;
+    }
+    .slider__card:hover .slider__card__img {
+      background-color: $light-l;
+    }
+    .slider__card:hover .slider__card__btn {
+      background-color: $pink-primary;
+    }
+    &__card__name {
+      margin-top: 1.5rem;
+      font-weight: 400;
+      font-size: 20px;
+      color: $dark-l-texts;
+      letter-spacing: 0.07rem;
+    }
+    &__card__btn {
+      background-color: $white;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 22.1px;
+      letter-spacing: 0.7px;
+      color: $dark-3xl-texts;
+      text-decoration: none;
+      margin-top: 10px;
+      padding: 15px 45px;
+      border-radius: 100px;
+      border: 2px solid $pink-primary;
+      cursor: url("../assets/icons/cursor.png"), auto;
+    }
+  }
+}
+
+.pets__btn {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 4.2rem;
+}
+
+.pets__inner__btn {
+  background-color: $pink-primary;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 1px;
+  color: $dark-3xl-texts;
+  text-decoration: none;
+  padding: 15px 50px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+.pets__inner__btn:hover {
+  background-color: #fddcc4;
+}
+
+/* -------HELP------*/
+.help {
+  padding-top: 5rem;
+  padding-bottom: 5.5rem;
+  background-color: $white;
+  &__heading {
+    margin: 0 auto;
+    text-align: center;
+    width: 310px;
+    font-weight: 400;
+    font-size: 35px;
+    color: $dark-l-texts;
+    line-height: 45px;
+    letter-spacing: 0.13rem;
+  }
+  &__lists {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 3.4375rem 7rem;
+    justify-content: center;
+    align-content: flex-start;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 3.7rem;
+  }
+  &__list {
+    margin-bottom: -1.6rem;
+  }
+  &__list__text {
+    font-size: 20px;
+    font-weight: 400;
+    color: $dark-l-texts;
+    letter-spacing: 0.12rem;
+  }
+}
+
+/* -------DONATION (IN ADDITION)------*/
+.donation {
+  padding-top: 5.6rem;
+  padding-bottom: 5.6rem;
+  background-color: $light-l;
+  &__inner {
+    display: flex;
+    margin-left: 9.1rem;
+  }
+  &__img {
+    margin-right: 1.8rem;
+    margin-top: 0.6rem;
+  }
+  &__heading {
+    font-size: 35px;
+    font-weight: 400;
+    color: $dark-l-texts;
+    letter-spacing: 0.13rem;
+    width: 300px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    line-height: 2.8rem;
+  }
+  &__subheading {
+    font-size: 15px;
+    font-weight: 400;
+    color: $dark-l-texts;
+    letter-spacing: 0.055rem;
+    margin-top: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  &__text {
+    font-family: "Arial";
+    font-weight: 400;
+    font-style: italic;
+    width: 380px;
+    font-size: 12px;
+    color: $grey-texts;
+    margin-top: 30px;
+    line-height: 18px;
+  }
+}
+
+.credit__card {
+  color: $pink-primary;
+  &__inner {
+    background-color: $pink-primary;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.075rem;
+    color: $dark-l-texts;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 60px;
+    padding-right: 15px;
+    border-radius: 9px;
+    cursor: pointer;
+    width: 349px;
+    height: 43px;
+    position: relative;
+  }
+  &__inner::before {
+    content: "";
+    background-image: url(../assets/icons/credit-card.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 23px;
+    display: block;
+    margin-left: 15px;
+    position: absolute;
+  }
+  &__inner:hover {
+    background-color: #fddcc4;
+  }
+}
+
+/* -------FOOTER------*/
+.footer {
+  background-image: url(../assets/images/footer-gradient-background.png);
+  background-repeat: no-repeat;
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%; /* Opera 9.6+ */
+  background-size: 100%; /* Современные браузеры */
+  &__inner {
+    display: flex;
+    padding-top: 1.4rem;
+  }
+  &__contacts {
+    width: 285px;
+    margin-right: 161px;
+  }
+  .contact__title {
+    font-weight: 400;
+    font-size: 35px;
+    color: $white;
+    letter-spacing: 0.12rem;
+    line-height: 2.7rem;
+    margin-bottom: 2.9rem;
+  }
+  .contact__mail {
+    width: 255px;
+    height: 27px;
+
+    &__text {
+      display: flex;
+      font-weight: 400px;
+      font-size: 20px;
+      font-style: normal;
+      color: $pink-primary;
+      letter-spacing: 0.07rem;
+      text-decoration: none;
+    }
+    &__text::before {
+      content: "";
+      background-image: url(../assets/icons/mail.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 40px;
+      height: 26px;
+      display: block;
+      margin-right: 20px;
+    }
+  }
+  .contact__phone {
+    width: 240px;
+    height: 32px;
+    margin-top: 43px;
+    &__text {
+      display: flex;
+      font-weight: 400px;
+      font-size: 20px;
+      font-style: normal;
+      color: $pink-primary;
+      letter-spacing: 0.07rem;
+      text-decoration: none;
+    }
+    &__text::before {
+      content: "";
+      background-image: url(../assets/icons/phone.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 40px;
+      height: 32px;
+      display: block;
+      margin-right: 20px;
+    }
+  }
+
+  &__location {
+    width: 305px;
+  }
+  .location__title {
+    font-weight: 400;
+    font-size: 35px;
+    color: $white;
+    width: 270px;
+    letter-spacing: 0.13rem;
+    line-height: 2.7rem;
+  }
+  .location__boston {
+    height: 50px;
+    a {
+      text-decoration: none;
+    }
+    &__text {
+      display: flex;
+      font-weight: 400px;
+      font-size: 20px;
+      font-style: normal;
+      color: $pink-primary;
+      letter-spacing: 0.078rem;
+    }
+    &__text::before {
+      content: "";
+      background-image: url(../assets/icons/pin.png);
+      background-repeat: no-repeat;
+      width: 43px;
+      height: 32px;
+      margin-right: 1.3rem;
+    }
+  }
+  .location__london {
+    height: 46px;
+    a {
+      text-decoration: none;
+    }
+    &__text {
+      display: flex;
+      font-weight: 400px;
+      font-size: 20px;
+      font-style: normal;
+      color: $pink-primary;
+      margin-top: 2rem;
+      letter-spacing: 0.078rem;
+    }
+    &__text::before {
+      content: "";
+      background-image: url(../assets/icons/pin.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 22px;
+      height: 32px;
+      display: block;
+      margin-right: 20px;
+    }
+  }
+  &__img {
+    margin-left: 10rem;
+    margin-top: 1.1rem;
+  }
+}
