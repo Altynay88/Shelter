@@ -151,7 +151,7 @@ body {
   .card {
     width: 270px;
     height: 435px;
-    background-color: $white;
+    background-color: $light-s-white;
     border-radius: 9px;
     margin-top: 3.5rem;
     margin-bottom: -1.6rem;
@@ -159,8 +159,8 @@ body {
     cursor: url("../assets/icons/cursor.png"), auto;
   }
 
-  .card:hover .card__img {
-    background-color: $light-l;
+  .card:hover {
+    background-color: $white;
   }
   .card:hover .card__btn {
     background-color: $pink-primary;
