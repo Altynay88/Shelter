@@ -184,7 +184,7 @@ body {
   cursor: url("../assets/icons/cursor.png"), auto;
 }
 .pets .navigation {
-  margin-top: 26vh;
+  margin-top: 22vh;
 }
 .pets .navigation__btns {
   display: -webkit-box;
