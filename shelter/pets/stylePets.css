@@ -1,0 +1,388 @@
+@charset "UTF-8";
+/*--------- FONTS--------- */
+@font-face {
+  font-family: "Georgia";
+  src: url(../assets/fonts/georgia/georgia-regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url(../assets/fonts/georgia/georgia-italic.ttf);
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url(../assets/fonts/georgia/georgia-bold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url(../assets/fonts/georgia/georgia-bold-italic.ttf);
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Arial";
+  src: url(../assets/fonts/arial/arial-regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+/*--------- COLORS--------- */
+body {
+  font-family: "Georgia";
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*--------- HEADER--------- */
+.header {
+  width: 100%;
+  height: 120px;
+}
+.header__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1200px;
+}
+.header__content {
+  margin-top: 0.5rem;
+}
+.header h1 {
+  margin-bottom: 0px;
+}
+.header__logo {
+  color: #545454;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.14rem;
+  margin-bottom: 0px;
+  text-decoration: none;
+}
+.header__logo-subtitle {
+  font-family: "Arial";
+  font-size: 13px;
+  font-weight: 400;
+  color: #292929;
+  letter-spacing: 0.08rem;
+  margin-top: 10px;
+  margin-left: 0.3rem;
+}
+
+/* --------NAV --------*/
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Arial";
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+.nav__link {
+  margin-left: 2.2rem;
+  color: #545454;
+  text-decoration: none;
+  opacity: 0.75;
+  -webkit-transition: opacity 0.1 linear;
+  transition: opacity 0.1 linear;
+}
+.nav__link-active {
+  color: #292929;
+  text-decoration: none;
+  padding-bottom: 0.3rem;
+  border-bottom: 3px solid #f1cdb3;
+  margin-left: 2.3rem;
+}
+.nav__link:hover {
+  opacity: 1;
+}
+
+/* -------PETS (MAIN)------*/
+.pets {
+  padding-top: 6.2rem;
+  padding-bottom: 6.2rem;
+  background-color: #f6f6f6;
+}
+.pets__heading {
+  margin-top: -1.2rem;
+}
+.pets__heading__inner {
+  margin: 0 auto;
+  text-align: center;
+  width: 400px;
+  font-weight: 400;
+  font-size: 35px;
+  color: #545454;
+  letter-spacing: 0.13rem;
+  margin-bottom: 6px;
+}
+.pets__cards__container {
+  width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.pets .card {
+  width: 270px;
+  height: 435px;
+  background-color: #ffffff;
+  border-radius: 9px;
+  margin-top: 3.5rem;
+  margin-bottom: -1.6rem;
+  text-align: center;
+  cursor: url("../assets/icons/cursor.png"), auto;
+}
+.pets .card:hover .card__img {
+  background-color: #f6f6f6;
+}
+.pets .card:hover .card__btn {
+  background-color: #f1cdb3;
+}
+.pets .card__name {
+  margin-top: 1.5rem;
+  font-weight: 400;
+  font-size: 20px;
+  color: #545454;
+  letter-spacing: 0.07rem;
+}
+.pets .card__btn {
+  background-color: #ffffff;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22.1px;
+  letter-spacing: 0.7px;
+  color: #292929;
+  text-decoration: none;
+  margin-top: 10px;
+  padding: 15px 45px;
+  border-radius: 100px;
+  border: 2px solid #f1cdb3;
+  cursor: url("../assets/icons/cursor.png"), auto;
+}
+.pets .navigation {
+  margin-top: 26vh;
+}
+.pets .navigation__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 340px;
+  height: 52px;
+}
+.pets .navigation__btn {
+  border: 2px solid #cdcdcd;
+  background-color: #f6f6f6;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100px;
+  width: 52px;
+  height: 52px;
+  cursor: pointer;
+}
+.pets .navigation__btn__number {
+  border: 2px solid #f1cdb3;
+  background-color: #f1cdb3;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100px;
+  width: 52px;
+  height: 52px;
+  cursor: pointer;
+}
+.pets .navigation__btn__number:hover {
+  background-color: #fddcc4;
+}
+.pets .navigation__btn__next {
+  border: 2px solid #f1cdb3;
+  background-color: #f6f6f6;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100px;
+  width: 52px;
+  height: 52px;
+  cursor: pointer;
+}
+.pets .navigation__btn__next:hover {
+  background-color: #f1cdb3;
+}
+
+/* -------FOOTER------*/
+.footer {
+  background-image: url(../assets/images/footer-gradient-background.png);
+  background-repeat: no-repeat;
+  /* Firefox 3.6+ */
+  /* Safari 3.1+ и Chrome 4.0+ */
+  /* Opera 9.6+ */
+  background-size: 100%;
+  /* Современные браузеры */
+}
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 1.5rem;
+}
+.footer__contacts {
+  width: 285px;
+  margin-right: 161px;
+}
+.footer .contact__title {
+  font-weight: 400;
+  font-size: 35px;
+  color: #ffffff;
+  letter-spacing: 0.12rem;
+  line-height: 2.7rem;
+  margin-bottom: 2.9rem;
+}
+.footer .contact__mail {
+  width: 255px;
+  height: 27px;
+}
+.footer .contact__mail__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 400px;
+  font-size: 20px;
+  font-style: normal;
+  color: #f1cdb3;
+  letter-spacing: 0.07rem;
+  text-decoration: none;
+}
+.footer .contact__mail__text::before {
+  content: "";
+  background-image: url(../assets/icons/mail.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40px;
+  height: 26px;
+  display: block;
+  margin-right: 20px;
+}
+.footer .contact__phone {
+  width: 240px;
+  height: 32px;
+  margin-top: 43px;
+}
+.footer .contact__phone__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 400px;
+  font-size: 20px;
+  font-style: normal;
+  color: #f1cdb3;
+  letter-spacing: 0.07rem;
+  text-decoration: none;
+}
+.footer .contact__phone__text::before {
+  content: "";
+  background-image: url(../assets/icons/phone.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40px;
+  height: 32px;
+  display: block;
+  margin-right: 20px;
+}
+.footer__location {
+  width: 305px;
+}
+.footer .location__title {
+  font-weight: 400;
+  font-size: 35px;
+  color: #ffffff;
+  width: 270px;
+  letter-spacing: 0.13rem;
+  line-height: 2.7rem;
+}
+.footer .location__boston {
+  height: 50px;
+}
+.footer .location__boston a {
+  text-decoration: none;
+}
+.footer .location__boston__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 400px;
+  font-size: 20px;
+  font-style: normal;
+  color: #f1cdb3;
+  letter-spacing: 0.078rem;
+}
+.footer .location__boston__text::before {
+  content: "";
+  background-image: url(../assets/icons/pin.png);
+  background-repeat: no-repeat;
+  width: 43px;
+  height: 32px;
+  margin-right: 1.1rem;
+}
+.footer .location__london {
+  height: 46px;
+}
+.footer .location__london a {
+  text-decoration: none;
+}
+.footer .location__london__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 400px;
+  font-size: 20px;
+  font-style: normal;
+  color: #f1cdb3;
+  margin-top: 2rem;
+  letter-spacing: 0.078rem;
+}
+.footer .location__london__text::before {
+  content: "";
+  background-image: url(../assets/icons/pin.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 22px;
+  height: 32px;
+  display: block;
+  margin-right: 1.1rem;
+}
+.footer__img {
+  margin-left: 10rem;
+  margin-top: 1.1rem;
+}
