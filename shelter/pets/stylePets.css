@@ -149,15 +149,15 @@ body {
 .pets .card {
   width: 270px;
   height: 435px;
-  background-color: #ffffff;
+  background-color: #fafafa;
   border-radius: 9px;
   margin-top: 3.5rem;
   margin-bottom: -1.6rem;
   text-align: center;
   cursor: url("../assets/icons/cursor.png"), auto;
 }
-.pets .card:hover .card__img {
-  background-color: #f6f6f6;
+.pets .card:hover {
+  background-color: #ffffff;
 }
 .pets .card:hover .card__btn {
   background-color: #f1cdb3;

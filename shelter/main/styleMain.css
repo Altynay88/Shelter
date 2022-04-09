@@ -261,14 +261,14 @@ body {
 .pets .slider .slider__card {
   width: 270px;
   height: 435px;
-  background-color: #ffffff;
+  background-color: #fafafa;
   border-radius: 9px;
   margin: 0 auto;
   margin-top: 3.5rem;
   cursor: url("../assets/icons/cursor.png"), auto;
 }
-.pets .slider .slider__card:hover .slider__card__img {
-  background-color: #f6f6f6;
+.pets .slider .slider__card:hover {
+  background-color: #ffffff;
 }
 .pets .slider .slider__card:hover .slider__card__btn {
   background-color: #f1cdb3;
