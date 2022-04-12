@@ -225,9 +225,6 @@ body {
   height: 52px;
   cursor: pointer;
 }
-.pets .navigation__btn__number:hover {
-  background-color: #fddcc4;
-}
 .pets .navigation__btn__next {
   border: 2px solid #f1cdb3;
   background-color: #f6f6f6;
