@@ -214,7 +214,7 @@ body {
   height: 52px;
   cursor: pointer;
 }
-.pets .navigation__btn__num {
+.pets .navigation__btn__number {
   border: 2px solid #f1cdb3;
   background-color: #f1cdb3;
   -webkit-box-align: center;
