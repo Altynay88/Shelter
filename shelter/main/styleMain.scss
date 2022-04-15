@@ -56,25 +56,42 @@ body {
 
 /*--------- HEADER--------- */
 .header {
-  position: absolute;
-  width: 100%;
+  background-image: url(../assets/images/start-screen-gradient-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -moz-background-size: 100%;
+  /* Firefox 3.6+ */
+  -webkit-background-size: 100%;
+  /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%;
+  /* Opera 9.6+ */
+  background-size: 100%;
+  /* Современные браузеры */
+  height: 100%;
+
   &__container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
   }
+
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
   }
+
   &__content {
-    margin-top: 1.8rem;
+    margin-top: 2.5rem;
+    margin-left: 5px;
   }
+
   h1 {
     margin-bottom: 0px;
   }
+
   &__logo {
     color: $pink-primary;
     font-size: 32px;
@@ -82,6 +99,7 @@ body {
     letter-spacing: 0.14rem;
     text-decoration: none;
   }
+
   &__logo-subtitle {
     font-family: "Arial";
     font-size: 13px;
@@ -95,14 +113,13 @@ body {
 
 /* --------NAV --------*/
 .nav {
-  display: flex;
   font-family: "Arial";
   font-size: 15px;
   font-weight: 400;
   margin-top: 2.5rem;
 
   &__link {
-    margin-left: 2.2rem;
+    margin-left: 28px;
     color: $grey-texts;
     text-decoration: none;
     opacity: 0.75;
@@ -126,34 +143,46 @@ body {
   background-image: url(../assets/images/start-screen-gradient-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  -moz-background-size: 100%; /* Firefox 3.6+ */
-  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
-  -o-background-size: 100%; /* Opera 9.6+ */
-  background-size: 100%; /* Современные браузеры */
+  -moz-background-size: 100%;
+  /* Firefox 3.6+ */
+  -webkit-background-size: 100%;
+  /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%;
+  /* Opera 9.6+ */
+  background-size: 100%;
+  /* Современные браузеры */
+  height: 100%;
+
   &__container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    height: 100%;
   }
+
   &__inner {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
   }
+
   &__content {
-    position: relative;
+    padding-bottom: 85px;
+    margin-left: 10px;
   }
+
   &__heading {
     font-size: 44px;
     font-weight: 400;
     width: 310px;
     color: $white;
     line-height: 130%;
-    margin-top: 4.4rem;
   }
+
   &__contentinner {
-    margin-top: 2.7rem;
+    margin-top: 2.6rem;
   }
+
   &__text {
     font-family: "Arial";
     font-size: 15px;
@@ -163,6 +192,7 @@ body {
     margin-bottom: 1.9rem;
     padding-bottom: 1.5rem;
   }
+
   &__btn {
     background-color: $pink-primary;
     font-size: 17px;
@@ -175,25 +205,33 @@ body {
     border-radius: 100px;
     cursor: pointer;
   }
+
   &__btn:hover {
     background-color: #fddcc4;
   }
+
   &__img {
-    margin-top: 10.5rem;
+    height: 100%;
+    width: 95%;
+    margin-top: 45px;
+    margin-left: 40px;
   }
 }
 
 /* -------ABOUT----------*/
 .about {
   padding-bottom: 5.4rem;
+
   &__inner {
     display: flex;
-    margin-top: 4.7rem;
-    margin-left: 11rem;
+    margin-top: 5rem;
+    margin-left: 11.5rem;
   }
+
   &__img {
     margin-right: 7.5rem;
   }
+
   &__heading {
     font-weight: 400;
     font-size: 35px;
@@ -204,6 +242,7 @@ body {
     margin-bottom: 25px;
     width: 370px;
   }
+
   &__text {
     font-family: "Arial";
     font-weight: 400;
@@ -221,8 +260,10 @@ body {
   padding-top: 6.2rem;
   padding-bottom: 7.1rem;
   background-color: $light-l;
+
   &__heading {
     margin-top: -1rem;
+
     &__inner {
       margin: 0 auto;
       text-align: center;
@@ -232,10 +273,13 @@ body {
       color: $dark-l-texts;
       letter-spacing: 0.13rem;
       margin-bottom: 6px;
+      margin-left: 410px;
     }
   }
+
   .slider {
     height: 500px;
+    margin-left: 10px;
     &__btn {
       border: 2px solid $pink-primary;
       border-radius: 100px;
@@ -244,15 +288,18 @@ body {
       margin-top: 15.5rem;
       cursor: pointer;
     }
+
     &__btn:hover {
       background-color: $pink-primary;
     }
+
     &__wrapper {
       width: 1200px;
       display: flex;
       text-align: center;
       margin: 0 auto;
     }
+
     .slider__card {
       width: 270px;
       height: 435px;
@@ -262,12 +309,15 @@ body {
       margin-top: 3.5rem;
       cursor: url("../assets/icons/cursor.png"), auto;
     }
+
     .slider__card:hover {
       background-color: $white;
     }
+
     .slider__card:hover .slider__card__btn {
       background-color: $pink-primary;
     }
+
     &__card__name {
       margin-top: 1.5rem;
       font-weight: 400;
@@ -275,6 +325,7 @@ body {
       color: $dark-l-texts;
       letter-spacing: 0.07rem;
     }
+
     &__card__btn {
       background-color: $white;
       font-size: 17px;
@@ -296,6 +347,7 @@ body {
   margin: 0 auto;
   text-align: center;
   padding-top: 4.2rem;
+  margin-left: 20px;
 }
 
 .pets__inner__btn {
@@ -310,59 +362,82 @@ body {
   border-radius: 100px;
   cursor: pointer;
 }
+
 .pets__inner__btn:hover {
   background-color: #fddcc4;
 }
 
 /* -------HELP------*/
 .help {
-  padding-top: 5rem;
-  padding-bottom: 5.5rem;
+  margin-top: 5rem;
   background-color: $white;
+  display: flex;
+  justify-content: center;
+  height: 530px;
+
+  &__container {
+    width: 1280px;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 611px;
+    margin-left: 20px;
+  }
   &__heading {
-    margin: 0 auto;
-    text-align: center;
     width: 310px;
+    text-align: center;
+    margin: 0 auto;
     font-weight: 400;
     font-size: 35px;
     color: $dark-l-texts;
     line-height: 45px;
     letter-spacing: 0.13rem;
   }
+
   &__lists {
     display: flex;
     flex-wrap: wrap;
-    grid-gap: 3.4375rem 7rem;
     justify-content: center;
-    align-content: flex-start;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 3.7rem;
+    margin-top: 60px;
+    max-width: 1031px;
+    background: $white;
+    gap: 55px 118px;
   }
   &__list {
-    margin-bottom: -1.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
   &__list__text {
+    margin-top: 30px;
     font-size: 20px;
     font-weight: 400;
     color: $dark-l-texts;
-    letter-spacing: 0.12rem;
+    line-height: 115%;
+    text-align: center;
+    letter-spacing: 0.06em;
   }
 }
 
 /* -------DONATION (IN ADDITION)------*/
 .donation {
-  padding-top: 5.6rem;
-  padding-bottom: 5.6rem;
+  padding-top: 80px;
+  padding-bottom: 88px;
   background-color: $light-l;
+
   &__inner {
     display: flex;
-    margin-left: 9.1rem;
+    margin-left: 9.5rem;
   }
+
   &__img {
     margin-right: 1.8rem;
     margin-top: 0.6rem;
   }
+
   &__heading {
     font-size: 35px;
     font-weight: 400;
@@ -373,14 +448,16 @@ body {
     margin-bottom: 0px;
     line-height: 2.8rem;
   }
+
   &__subheading {
     font-size: 15px;
     font-weight: 400;
     color: $dark-l-texts;
     letter-spacing: 0.055rem;
-    margin-top: 1.1rem;
+    margin-top: 1.2rem;
     margin-bottom: 2rem;
   }
+
   &__text {
     font-family: "Arial";
     font-weight: 400;
@@ -395,6 +472,7 @@ body {
 
 .credit__card {
   color: $pink-primary;
+
   &__inner {
     background-color: $pink-primary;
     font-weight: 400;
@@ -412,6 +490,7 @@ body {
     height: 43px;
     position: relative;
   }
+
   &__inner::before {
     content: "";
     background-image: url(../assets/icons/credit-card.png);
@@ -423,6 +502,7 @@ body {
     margin-left: 15px;
     position: absolute;
   }
+
   &__inner:hover {
     background-color: #fddcc4;
   }
@@ -432,26 +512,35 @@ body {
 .footer {
   background-image: url(../assets/images/footer-gradient-background.png);
   background-repeat: no-repeat;
-  -moz-background-size: 100%; /* Firefox 3.6+ */
-  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
-  -o-background-size: 100%; /* Opera 9.6+ */
-  background-size: 100%; /* Современные браузеры */
+  -moz-background-size: 100%;
+  /* Firefox 3.6+ */
+  -webkit-background-size: 100%;
+  /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%;
+  /* Opera 9.6+ */
+  background-size: 100%;
+  /* Современные браузеры */
   &__inner {
     display: flex;
     padding-top: 1.4rem;
   }
+
   &__contacts {
     width: 285px;
     margin-right: 161px;
+    margin-left: 10px;
   }
+
   .contact__title {
     font-weight: 400;
     font-size: 35px;
+    width: 276px;
     color: $white;
     letter-spacing: 0.12rem;
     line-height: 2.7rem;
     margin-bottom: 2.9rem;
   }
+
   .contact__mail {
     width: 255px;
     height: 27px;
@@ -465,6 +554,7 @@ body {
       letter-spacing: 0.07rem;
       text-decoration: none;
     }
+
     &__text::before {
       content: "";
       background-image: url(../assets/icons/mail.png);
@@ -476,10 +566,12 @@ body {
       margin-right: 20px;
     }
   }
+
   .contact__phone {
     width: 240px;
     height: 32px;
     margin-top: 43px;
+
     &__text {
       display: flex;
       font-weight: 400px;
@@ -489,6 +581,7 @@ body {
       letter-spacing: 0.07rem;
       text-decoration: none;
     }
+
     &__text::before {
       content: "";
       background-image: url(../assets/icons/phone.png);
@@ -504,6 +597,7 @@ body {
   &__location {
     width: 305px;
   }
+
   .location__title {
     font-weight: 400;
     font-size: 35px;
@@ -512,11 +606,15 @@ body {
     letter-spacing: 0.13rem;
     line-height: 2.7rem;
   }
+
   .location__boston {
     height: 50px;
+    width: 300px;
+
     a {
       text-decoration: none;
     }
+
     &__text {
       display: flex;
       font-weight: 400px;
@@ -525,6 +623,7 @@ body {
       color: $pink-primary;
       letter-spacing: 0.078rem;
     }
+
     &__text::before {
       content: "";
       background-image: url(../assets/icons/pin.png);
@@ -534,11 +633,14 @@ body {
       margin-right: 1.3rem;
     }
   }
+
   .location__london {
     height: 46px;
+
     a {
       text-decoration: none;
     }
+
     &__text {
       display: flex;
       font-weight: 400px;
@@ -548,6 +650,7 @@ body {
       margin-top: 2rem;
       letter-spacing: 0.078rem;
     }
+
     &__text::before {
       content: "";
       background-image: url(../assets/icons/pin.png);
@@ -559,8 +662,478 @@ body {
       margin-right: 20px;
     }
   }
+
   &__img {
     margin-left: 10rem;
     margin-top: 1.1rem;
+  }
+}
+
+/* -------ADAPTIVE ------*/
+
+@media (max-width: 768px) {
+  /* --------NAV --------*/
+  .header {
+    &__container {
+      max-width: 708px;
+    }
+
+    &__inner {
+      width: 708px;
+      height: 115px;
+    }
+
+    &__content {
+      margin-top: 0;
+      margin-left: 0px;
+    }
+  }
+
+  .nav {
+    margin-top: 0px;
+    &__link {
+      margin-left: 32px;
+    }
+  }
+
+  /* --------START SCREEN-------*/
+  .start__screen {
+    background-image: url(../assets/images/start-screen-gradient-background768.jpg);
+
+    &__container {
+      max-width: 708px;
+    }
+
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__heading {
+      margin-top: 35px;
+    }
+
+    &__content {
+      padding-bottom: 120px;
+      margin-left: 0px;
+    }
+
+    &__btn {
+      margin-left: 7.7rem;
+    }
+
+    &__img {
+      margin-left: 9rem;
+      width: 79%;
+      margin-top: 0;
+    }
+  }
+
+  /* -------ABOUT----------*/
+  .about {
+    padding-bottom: 0;
+
+    &__inner {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-top: 4.3rem;
+      margin-left: 10.5rem;
+      padding-bottom: 7rem;
+    }
+    &__heading {
+      margin-bottom: 23px;
+    }
+    &__img {
+      margin-left: 4rem;
+      margin-top: 3.2rem;
+    }
+  }
+
+  /* -------PETS------*/
+
+  .pets {
+    height: 877px;
+    width: 768px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .container {
+      max-width: 768px;
+      margin: 0 auto;
+    }
+
+    &__heading {
+      padding-top: 5.3rem;
+    }
+
+    &__heading__inner {
+      margin-left: 185px;
+      margin-bottom: 4px;
+    }
+    .slider {
+      width: 768px;
+      margin-left: 0px;
+      margin-top: 5px;
+      &__card {
+        margin-top: 3.7rem;
+      }
+      &__card768 {
+        display: none;
+      }
+      &__wrapper {
+        width: 708px;
+      }
+    }
+    &__btn {
+      margin-left: 0;
+    }
+  }
+  /* -------HELP------*/
+  .help {
+    margin-top: 5.3rem;
+    height: 698px;
+    &__container {
+      width: 708px;
+    }
+    &__inner {
+      margin-left: 0px;
+    }
+    &__lists {
+      margin-top: 60px;
+      max-width: 635px;
+      background: $white;
+      gap: 55px 110px;
+    }
+    &__list {
+      width: 117px;
+    }
+    &__list__text {
+      width: 170px;
+    }
+  }
+
+  /* -------DONATION (IN ADDITION)------*/
+  .donation {
+    padding-top: 0px;
+    padding-bottom: 0;
+    height: 774px;
+    .container {
+      max-width: 708px;
+    }
+    &__inner {
+      display: flex;
+      flex-direction: column-reverse;
+      padding-top: 80px;
+      margin-left: 165px;
+    }
+    &__img {
+      margin-top: 3rem;
+      margin-left: -65px;
+    }
+  }
+
+  /* -------FOOTER------*/
+  .footer {
+    background-image: url(../assets/images/footer-gradient-background768.png);
+    height: 639px;
+    width: 768px;
+    padding-top: 5px;
+    &__container {
+      max-width: 768px;
+    }
+    &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+    }
+    &__contacts {
+      margin-left: 65px;
+      margin-right: 50px;
+    }
+    &__img {
+      margin-left: 14.5rem;
+      margin-top: 3rem;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  /* --------NAV --------*/
+  .header {
+    &__container {
+      max-width: 300px;
+    }
+    &__inner {
+      width: 257px;
+    }
+  }
+
+  .nav {
+    display: none;
+  }
+
+  /* --------START SCREEN-------*/
+  .start__screen {
+    background-image: url(../assets/images/start-screen-gradient-background320.png);
+
+    &__container {
+      max-width: 300px;
+    }
+
+    &__inner {
+      flex-direction: column;
+      width: 300px;
+    }
+    &__content {
+      width: 300px;
+      height: 320px;
+    }
+
+    &__heading {
+      font-size: 25px;
+      width: 230px;
+      text-align: center;
+      margin: 0 auto;
+      letter-spacing: 1.4px;
+      margin-top: 35px;
+    }
+    &__text {
+      width: 300px;
+      text-align: center;
+    }
+    &__btn {
+      margin-left: 2.7rem;
+    }
+
+    &__img {
+      margin-left: 2.5rem;
+      width: 85%;
+      margin-top: 0;
+    }
+  }
+
+  /* -------ABOUT----------*/
+  .about {
+    max-width: 320px;
+    .container {
+      max-width: 300px;
+    }
+    &__inner {
+      width: 300px;
+      margin-left: 0;
+      margin-top: 0px;
+      padding-bottom: 3.5rem;
+    }
+    &__content {
+      width: 300px;
+      margin-top: 40px;
+    }
+    &__heading {
+      font-size: 25px;
+      letter-spacing: 1.7px;
+      line-height: 33px;
+      text-align: center;
+      margin: 0 auto;
+      width: 230px;
+    }
+
+    &__text {
+      margin: 0 auto;
+      word-spacing: 1px;
+      width: 280px;
+      text-align: justify;
+      margin-top: 23px;
+      margin-left: 15px;
+    }
+    &__img {
+      margin: 0 auto;
+      margin-top: 2.5rem;
+    }
+    &__img__inner {
+      width: 100%;
+      height: 353px;
+    }
+  }
+
+  /* -------PETS------*/
+
+  .pets {
+    width: 320px;
+    height: 791px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .container {
+      max-width: 300px;
+    }
+
+    &__heading {
+      width: 300px;
+      padding-top: 40px;
+    }
+
+    &__heading__inner {
+      font-size: 25px;
+      width: 300px;
+      margin-left: 0;
+      margin-bottom: 4px;
+      letter-spacing: 0.1rem;
+    }
+    .slider {
+      width: 320px;
+      margin-left: 0px;
+      margin-top: 5px;
+      .slider__card {
+        margin-top: 2.5rem;
+        margin-left: 0;
+      }
+      &__card {
+        order: -1;
+      }
+      &__card320 {
+        display: none;
+      }
+      &__wrapper {
+        flex-wrap: wrap;
+        width: 300px;
+      }
+      &__btn {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 50px;
+        margin-right: 25px;
+      }
+    }
+    .pets__btn {
+      margin-top: 35px;
+    }
+  }
+  /* -------HELP------*/
+  .help {
+    margin-top: 0;
+    padding-bottom: 45px;
+    &__container {
+      width: 300px;
+    }
+    &__inner {
+      margin-left: 0px;
+    }
+    &__heading {
+      font-size: 25px;
+      letter-spacing: 0.1rem;
+      line-height: 32px;
+      width: 225px;
+      margin-top: 40px;
+    }
+    &__lists {
+      margin-top: 40px;
+      max-width: 280px;
+      justify-content: space-between;
+      gap: 30px 20px;
+    }
+    &__list {
+      width: 117px;
+    }
+    &__list__text {
+      font-size: 15px;
+      width: 170px;
+      margin-top: 20px;
+    }
+    &__img {
+      width: 50px;
+    }
+    &__img__food {
+      width: 40px;
+      height: 50px;
+    }
+    &__img__shampoos {
+      width: 25px;
+      height: 50px;
+    }
+  }
+
+  /* -------DONATION (IN ADDITION)------*/
+  .donation {
+    width: 320px;
+    height: 540px;
+    .container {
+      max-width: 300px;
+    }
+    &__inner {
+      display: flex;
+      flex-direction: column-reverse;
+      padding-top: 41px;
+      margin-left: 0;
+      width: 300px;
+    }
+    &__heading {
+      font-size: 25px;
+      text-align: center;
+      width: 220px;
+      line-height: 2.1rem;
+      letter-spacing: 0.1rem;
+      margin: 0 auto;
+    }
+    &__subheading {
+      font-size: 15px;
+      letter-spacing: 0px;
+      margin-left: 13px;
+      margin-top: 20px;
+      margin-bottom: 2.5rem;
+    }
+    &__img {
+      margin-top: 6rem;
+      margin-left: -65px;
+    }
+    .credit__card {
+      color: $pink-primary;
+
+      &__inner {
+        font-size: 15px;
+        letter-spacing: 0.05rem;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        padding-left: 60px;
+        margin-left: 10px;
+      }
+      &__inner::before {
+        margin-left: 23px;
+      }
+    }
+    &__text {
+      margin-left: 10px;
+      text-align: justify;
+      width: 280px;
+    }
+    &__img {
+      margin: 0 auto;
+      margin-top: 30px;
+      margin-left: 30px;
+    }
+    &__img__inner {
+      width: 95%;
+    }
+  }
+
+  /* -------FOOTER------*/
+  .footer {
+    background-image: url(../assets/images/footer-gradient-background320.png);
+    width: 320px;
+    padding-top: 5px;
+    &__container {
+      max-width: 768px;
+    }
+    &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+    }
+    &__contacts {
+      margin-left: 65px;
+      margin-right: 50px;
+    }
+    &__img {
+      margin-left: 14.5rem;
+      margin-top: 3rem;
+    }
   }
 }
