@@ -70,10 +70,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
   }
   &__content {
     margin-top: 0.5rem;
+    margin-left: 5px;
   }
   h1 {
     margin-bottom: 0px;
@@ -106,7 +108,7 @@ body {
   margin-top: 1rem;
 
   &__link {
-    margin-left: 2.2rem;
+    margin-left: 30px;
     color: $dark-l-texts;
     text-decoration: none;
     opacity: 0.75;
@@ -134,7 +136,8 @@ body {
   padding-bottom: 6.2rem;
   background-color: $light-l;
   &__heading {
-    margin-top: -1.2rem;
+    margin-top: -1.1rem;
+    margin-left: 20px;
     &__inner {
       margin: 0 auto;
       text-align: center;
@@ -152,6 +155,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 85px;
+    margin-left: 10px;
   }
   .card {
     width: 270px;
@@ -192,6 +196,7 @@ body {
     cursor: url("../assets/icons/cursor.png"), auto;
   }
   .navigation {
+    margin-left: 10px;
     &__btns {
       display: flex;
       justify-content: space-between;
@@ -245,10 +250,11 @@ body {
   &__inner {
     display: flex;
     padding-top: 1.5rem;
+    margin-left: 10px;
   }
   &__contacts {
     width: 285px;
-    margin-right: 161px;
+    margin-right: 159px;
   }
   .contact__title {
     font-weight: 400;
@@ -368,5 +374,139 @@ body {
   &__img {
     margin-left: 10rem;
     margin-top: 1.1rem;
+  }
+}
+
+/* -------ADAPTIVE ------*/
+
+@media (max-width: 768px) {
+  /* -------HEADER------*/
+  .header {
+    &__container {
+      max-width: 708px;
+    }
+    &__content {
+      margin-left: 0px;
+    }
+    .nav__link {
+      margin-left: 35px;
+    }
+  }
+
+  /* -------PETS------*/
+  .pets {
+    width: 768px;
+    padding-bottom: 4.4rem;
+    .container {
+      max-width: 708px;
+    }
+    &__heading {
+      margin-left: 0px;
+    }
+    &__cards__container {
+      margin: 0 auto;
+      justify-content: space-evenly;
+      margin-top: 2rem;
+      margin-bottom: 10px;
+      width: 680px;
+    }
+    .card {
+      margin-top: 0px;
+      margin-bottom: 30px;
+    }
+
+    .card:nth-last-child(-n + 2) {
+      display: none;
+    }
+  }
+  /* -------FOOTER------*/
+  .footer {
+    background-image: url(../assets/images/footer-gradient-background768.png);
+    height: 639px;
+    width: 768px;
+    padding-top: 5px;
+    &__container {
+      max-width: 708px;
+    }
+    &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      margin-left: 0;
+    }
+    &__contacts {
+      margin-left: 65px;
+      margin-right: 50px;
+    }
+    &__img {
+      margin-left: 14.5rem;
+      margin-top: 3rem;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  /* -------HEADER------*/
+  .header {
+    &__container {
+      max-width: 300px;
+    }
+    &__content {
+      margin-left: 0px;
+    }
+    .nav__link {
+      margin-left: 35px;
+    }
+  }
+
+  /* -------PETS------*/
+  .pets {
+    width: 768px;
+    padding-bottom: 4.4rem;
+    .container {
+      max-width: 708px;
+    }
+    &__heading {
+      margin-left: 0px;
+    }
+    &__cards__container {
+      margin: 0 auto;
+      justify-content: space-evenly;
+      margin-top: 2rem;
+      margin-bottom: 10px;
+      width: 680px;
+    }
+    .card {
+      margin-top: 0px;
+      margin-bottom: 30px;
+    }
+
+    .card:nth-last-child(-n + 2) {
+      display: none;
+    }
+  }
+  /* -------FOOTER------*/
+  .footer {
+    background-image: url(../assets/images/footer-gradient-background768.png);
+    height: 639px;
+    width: 768px;
+    padding-top: 5px;
+    &__container {
+      max-width: 708px;
+    }
+    &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      margin-left: 0;
+    }
+    &__contacts {
+      margin-left: 65px;
+      margin-right: 50px;
+    }
+    &__img {
+      margin-left: 14.5rem;
+      margin-top: 3rem;
+    }
   }
 }
