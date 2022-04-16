@@ -671,7 +671,7 @@ body {
 
 /* -------ADAPTIVE ------*/
 
-@media (max-width: 768px) {
+@media (max-width: 1279px) and (min-width: 768px) {
   /* --------NAV --------*/
   .header {
     &__container {
@@ -776,7 +776,7 @@ body {
       &__card {
         margin-top: 3.7rem;
       }
-      &__card768 {
+      &__card320 {
         display: none;
       }
       &__wrapper {
@@ -856,14 +856,18 @@ body {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 767px) and (min-width: 320px) {
   /* --------NAV --------*/
   .header {
     &__container {
-      max-width: 300px;
+      max-width: 310px;
     }
     &__inner {
       width: 257px;
+    }
+    &__content {
+      margin-top: 10px;
+      margin-left: 0;
     }
   }
 
@@ -873,7 +877,7 @@ body {
 
   /* --------START SCREEN-------*/
   .start__screen {
-    background-image: url(../assets/images/start-screen-gradient-background320.png);
+    background-image: url(../assets/images/footer-gradient-background320.png);
 
     &__container {
       max-width: 300px;
@@ -884,7 +888,7 @@ body {
       width: 300px;
     }
     &__content {
-      width: 300px;
+      width: 320px;
       height: 320px;
     }
 
@@ -892,9 +896,9 @@ body {
       font-size: 25px;
       width: 230px;
       text-align: center;
-      margin: 0 auto;
+      margin-left: 35px;
       letter-spacing: 1.4px;
-      margin-top: 35px;
+      margin-top: 45px;
     }
     &__text {
       width: 300px;
@@ -907,13 +911,14 @@ body {
     &__img {
       margin-left: 2.5rem;
       width: 85%;
-      margin-top: 0;
+      margin-top: 44px;
     }
   }
 
   /* -------ABOUT----------*/
   .about {
     max-width: 320px;
+    padding-bottom: 0px;
     .container {
       max-width: 300px;
     }
@@ -922,6 +927,8 @@ body {
       margin-left: 0;
       margin-top: 0px;
       padding-bottom: 3.5rem;
+      display: flex;
+      flex-direction: column-reverse;
     }
     &__content {
       width: 300px;
@@ -968,7 +975,7 @@ body {
 
     &__heading {
       width: 300px;
-      padding-top: 40px;
+      padding-top: 45px;
     }
 
     &__heading__inner {
@@ -988,6 +995,9 @@ body {
       }
       &__card {
         order: -1;
+      }
+      &__card768 {
+        display: none;
       }
       &__card320 {
         display: none;
@@ -1010,7 +1020,7 @@ body {
   /* -------HELP------*/
   .help {
     margin-top: 0;
-    padding-bottom: 45px;
+    padding-bottom: 215px;
     &__container {
       width: 300px;
     }
@@ -1053,6 +1063,8 @@ body {
 
   /* -------DONATION (IN ADDITION)------*/
   .donation {
+    padding-top: 0;
+    padding-bottom: 0px;
     width: 320px;
     height: 540px;
     .container {
@@ -1117,23 +1129,66 @@ body {
   /* -------FOOTER------*/
   .footer {
     background-image: url(../assets/images/footer-gradient-background320.png);
-    width: 320px;
-    padding-top: 5px;
-    &__container {
-      max-width: 768px;
-    }
+    padding-top: 0px;
     &__inner {
-      display: flex;
+      width: 300px;
       flex-wrap: wrap;
-      padding: 0;
+      justify-content: center;
+      gap: 27px 60px;
+      padding-top: 0px;
     }
     &__contacts {
-      margin-left: 65px;
-      margin-right: 50px;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .contact__title {
+      font-size: 25px;
+      line-height: 32px;
+      text-align: center;
+      margin-top: 30px;
+      letter-spacing: 0.1rem;
+      margin-bottom: 27px;
+    }
+    .contact__mail {
+      width: 250px;
+    }
+    .contact__phone {
+      margin-top: 45px;
+    }
+    .location__title {
+      font-size: 25px;
+      line-height: 32px;
+      text-align: center;
+      margin-left: 18px;
+    }
+    .location__boston {
+      margin-top: 42px;
+    }
+    .location__boston__text {
+      font-size: 20px;
+      line-height: 23px;
+      letter-spacing: 0.06em;
+      display: flex;
+      align-items: center;
+    }
+    .location__london__text {
+      font-size: 20px;
+      line-height: 23px;
+      letter-spacing: 0.06em;
+      display: flex;
+      align-items: center;
     }
     &__img {
-      margin-left: 14.5rem;
-      margin-top: 3rem;
+      margin-left: 0;
+      margin-top: 0;
+    }
+    &__img__inner {
+      width: 260px;
+      height: 269px;
     }
   }
 }
