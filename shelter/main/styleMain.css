@@ -836,6 +836,34 @@ body {
     margin-top: 10px;
     margin-left: 0;
   }
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+  }
+  .header__burger span {
+    position: absolute;
+    background-color: #f1cdb3;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+  }
+  .header__burger:before, .header__burger:after {
+    content: "";
+    background-color: #f1cdb3;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+  }
+  .header__burger:before {
+    top: 0;
+  }
+  .header__burger:after {
+    bottom: 0;
+  }
 
   .nav {
     display: none;
@@ -868,7 +896,7 @@ body {
     margin-top: 45px;
   }
   .start__screen__text {
-    width: 300px;
+    width: 200px;
     text-align: center;
   }
   .start__screen__btn {
