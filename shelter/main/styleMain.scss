@@ -48,10 +48,16 @@ body {
   font-family: "Georgia";
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .container {
-  width: 100%;
-  max-width: 1200px;
+  max-width: 1280px;
+  box-sizing: border-box;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
 /*--------- HEADER--------- */
@@ -59,40 +65,27 @@ body {
   background-image: url(../assets/images/start-screen-gradient-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  -moz-background-size: 100%;
-  /* Firefox 3.6+ */
-  -webkit-background-size: 100%;
-  /* Safari 3.1+ и Chrome 4.0+ */
-  -o-background-size: 100%;
-  /* Opera 9.6+ */
   background-size: 100%;
-  /* Современные браузеры */
-  height: 100%;
-
-  &__container {
+  display: flex;
+  height: 120px;
+  top: 0;
+  .container {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    max-width: 1200px;
+    padding-top: 60px;
   }
-
-  &__content {
-    margin-top: 2.5rem;
-    margin-left: 5px;
-  }
-
-  h1 {
-    margin-bottom: 0px;
-  }
-
   &__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  &__title {
     color: $pink-primary;
     font-size: 32px;
     font-weight: 400;
@@ -113,13 +106,14 @@ body {
 
 /* --------NAV --------*/
 .nav {
+  display: flex;
   font-family: "Arial";
   font-size: 15px;
   font-weight: 400;
-  margin-top: 2.5rem;
+  line-height: 24px;
 
   &__link {
-    margin-left: 28px;
+    margin-left: 36px;
     color: $grey-texts;
     text-decoration: none;
     opacity: 0.75;
@@ -143,32 +137,15 @@ body {
   background-image: url(../assets/images/start-screen-gradient-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  -moz-background-size: 100%;
-  /* Firefox 3.6+ */
-  -webkit-background-size: 100%;
-  /* Safari 3.1+ и Chrome 4.0+ */
-  -o-background-size: 100%;
-  /* Opera 9.6+ */
   background-size: 100%;
-  /* Современные браузеры */
-  height: 100%;
-
-  &__container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 100%;
-  }
-
-  &__inner {
+  .container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    justify-content: space-between;
+    padding-top: 60px;
   }
-
   &__content {
-    padding-bottom: 85px;
-    margin-left: 10px;
+    width: 460px;
+    padding-top: 163px;
   }
 
   &__heading {
@@ -177,31 +154,28 @@ body {
     width: 310px;
     color: $white;
     line-height: 130%;
+    margin-right: 150px;
   }
-
-  &__contentinner {
-    margin-top: 2.6rem;
-  }
-
   &__text {
     font-family: "Arial";
     font-size: 15px;
     line-height: 160%;
     width: 460px;
     color: $grey-texts;
-    margin-bottom: 1.9rem;
-    padding-bottom: 1.5rem;
+    padding: 42px 0;
   }
-
+  &__button {
+    margin-top: 57px;
+  }
   &__btn {
     background-color: $pink-primary;
     font-size: 17px;
     font-weight: 400;
     line-height: 23px;
-    letter-spacing: 0.6px;
+    letter-spacing: 1px;
     color: $dark-3xl-texts;
     text-decoration: none;
-    padding: 15px 50px;
+    padding: 15px 45px;
     border-radius: 100px;
     cursor: pointer;
   }
@@ -211,36 +185,36 @@ body {
   }
 
   &__img {
-    height: 100%;
-    width: 95%;
-    margin-top: 45px;
-    margin-left: 40px;
+    background-size: 698px 728px;
+    width: 698px;
+    height: 728px;
   }
 }
 
 /* -------ABOUT----------*/
 .about {
-  padding-bottom: 5.4rem;
-
-  &__inner {
+  background-color: $white;
+  .container {
     display: flex;
-    margin-top: 5rem;
-    margin-left: 11.5rem;
+    padding: 80px 30px 90px 30px;
+    justify-content: center;
+    gap: 120px;
   }
-
   &__img {
-    margin-right: 7.5rem;
+    width: 300px;
+    height: 408px;
   }
-
+  &__content {
+    margin-top: 10px;
+  }
   &__heading {
     font-weight: 400;
     font-size: 35px;
     letter-spacing: 2px;
     line-height: 45.5px;
     color: $dark-l-texts;
-    margin-top: 15px;
-    margin-bottom: 25px;
     width: 370px;
+    margin-bottom: 25px;
   }
 
   &__text {
@@ -257,29 +231,31 @@ body {
 /* -------PETS------*/
 
 .pets {
-  padding-top: 6.2rem;
-  padding-bottom: 7.1rem;
   background-color: $light-l;
-
+  padding-bottom: 15px;
+  &__inner {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__headings {
+    margin: 0 auto;
+  }
   &__heading {
-    margin-top: -1rem;
-
-    &__inner {
-      margin: 0 auto;
-      text-align: center;
-      width: 400px;
-      font-weight: 400;
-      font-size: 35px;
-      color: $dark-l-texts;
-      letter-spacing: 0.13rem;
-      margin-bottom: 6px;
-      margin-left: 410px;
-    }
+    text-align: center;
+    width: 400px;
+    font-weight: 400;
+    font-size: 35px;
+    color: $dark-l-texts;
+    letter-spacing: 0.13rem;
+    margin-bottom: 6px;
   }
 
   .slider {
-    height: 500px;
-    margin-left: 10px;
+    width: 100%;
+    padding-bottom: 75px;
     &__btn {
       border: 2px solid $pink-primary;
       border-radius: 100px;
@@ -334,7 +310,7 @@ body {
       letter-spacing: 0.7px;
       color: $dark-3xl-texts;
       text-decoration: none;
-      margin-top: 10px;
+      margin-top: 30px;
       padding: 15px 45px;
       border-radius: 100px;
       border: 2px solid $pink-primary;
@@ -346,8 +322,6 @@ body {
 .pets__btn {
   margin: 0 auto;
   text-align: center;
-  padding-top: 4.2rem;
-  margin-left: 20px;
 }
 
 .pets__inner__btn {
@@ -369,21 +343,15 @@ body {
 
 /* -------HELP------*/
 .help {
-  margin-top: 5rem;
   background-color: $white;
   display: flex;
   justify-content: center;
-  height: 530px;
-
-  &__container {
-    width: 1280px;
-  }
   &__inner {
+    padding-top: 80px;
+    padding-bottom: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 611px;
-    margin-left: 20px;
   }
   &__heading {
     width: 310px;
@@ -424,20 +392,19 @@ body {
 
 /* -------DONATION (IN ADDITION)------*/
 .donation {
-  padding-top: 80px;
-  padding-bottom: 88px;
   background-color: $light-l;
-
-  &__inner {
+  .container {
+    padding-top: 80px;
+    padding-bottom: 100px;
     display: flex;
-    margin-left: 9.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
   }
-
   &__img {
-    margin-right: 1.8rem;
-    margin-top: 0.6rem;
+    width: 505px;
+    height: 261px;
   }
-
   &__heading {
     font-size: 35px;
     font-weight: 400;
@@ -448,7 +415,6 @@ body {
     margin-bottom: 0px;
     line-height: 2.8rem;
   }
-
   &__subheading {
     font-size: 15px;
     font-weight: 400;
@@ -457,7 +423,6 @@ body {
     margin-top: 1.2rem;
     margin-bottom: 2rem;
   }
-
   &__text {
     font-family: "Arial";
     font-weight: 400;
@@ -469,10 +434,8 @@ body {
     line-height: 18px;
   }
 }
-
 .credit__card {
   color: $pink-primary;
-
   &__inner {
     background-color: $pink-primary;
     font-weight: 400;
@@ -490,7 +453,6 @@ body {
     height: 43px;
     position: relative;
   }
-
   &__inner::before {
     content: "";
     background-image: url(../assets/icons/credit-card.png);
@@ -502,300 +464,184 @@ body {
     margin-left: 15px;
     position: absolute;
   }
-
   &__inner:hover {
     background-color: #fddcc4;
   }
 }
-
 /* -------FOOTER------*/
 .footer {
   background-image: url(../assets/images/footer-gradient-background.png);
+  padding-top: 40px;
   background-repeat: no-repeat;
-  -moz-background-size: 100%;
-  /* Firefox 3.6+ */
-  -webkit-background-size: 100%;
-  /* Safari 3.1+ и Chrome 4.0+ */
-  -o-background-size: 100%;
-  /* Opera 9.6+ */
   background-size: 100%;
-  /* Современные браузеры */
-  &__inner {
+  .container {
     display: flex;
-    padding-top: 1.4rem;
+    justify-content: space-between;
   }
-
   &__contacts {
-    width: 285px;
-    margin-right: 161px;
-    margin-left: 10px;
+    padding-top: 16px;
+    height: 234px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
-
-  .contact__title {
+  .footer__title {
+    width: 279px;
     font-weight: 400;
     font-size: 35px;
-    width: 276px;
     color: $white;
     letter-spacing: 0.12rem;
     line-height: 2.7rem;
-    margin-bottom: 2.9rem;
   }
-
-  .contact__mail {
-    width: 255px;
-    height: 27px;
-
-    &__text {
-      display: flex;
-      font-weight: 400px;
-      font-size: 20px;
-      font-style: normal;
-      color: $pink-primary;
-      letter-spacing: 0.07rem;
-      text-decoration: none;
-    }
-
-    &__text::before {
-      content: "";
-      background-image: url(../assets/icons/mail.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 40px;
-      height: 26px;
-      display: block;
-      margin-right: 20px;
-    }
+  &__contacts a {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    color: $pink-primary;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
   }
-
-  .contact__phone {
-    width: 240px;
+  &__mail__text::before {
+    content: "";
+    background-image: url(../assets/icons/mail.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40px;
+    height: 26px;
+    display: block;
+    margin-right: 20px;
+  }
+  &__phone__text::before {
+    content: "";
+    background-image: url(../assets/icons/phone.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40px;
     height: 32px;
-    margin-top: 43px;
-
-    &__text {
-      display: flex;
-      font-weight: 400px;
-      font-size: 20px;
-      font-style: normal;
-      color: $pink-primary;
-      letter-spacing: 0.07rem;
-      text-decoration: none;
-    }
-
-    &__text::before {
-      content: "";
-      background-image: url(../assets/icons/phone.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 40px;
-      height: 32px;
-      display: block;
-      margin-right: 20px;
-    }
+    display: block;
+    margin-right: 20px;
   }
 
   &__location {
-    width: 305px;
-  }
-
-  .location__title {
-    font-weight: 400;
-    font-size: 35px;
-    color: $white;
-    width: 270px;
-    letter-spacing: 0.13rem;
-    line-height: 2.7rem;
-  }
-
-  .location__boston {
-    height: 50px;
+    padding-top: 16px;
     width: 300px;
-
-    a {
-      text-decoration: none;
-    }
-
-    &__text {
-      display: flex;
-      font-weight: 400px;
-      font-size: 20px;
-      font-style: normal;
-      color: $pink-primary;
-      letter-spacing: 0.078rem;
-    }
-
-    &__text::before {
-      content: "";
-      background-image: url(../assets/icons/pin.png);
-      background-repeat: no-repeat;
-      width: 43px;
-      height: 32px;
-      margin-right: 1.3rem;
-    }
+    height: 234px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
-  .location__london {
-    height: 46px;
-
-    a {
-      text-decoration: none;
-    }
-
-    &__text {
-      display: flex;
-      font-weight: 400px;
-      font-size: 20px;
-      font-style: normal;
-      color: $pink-primary;
-      margin-top: 2rem;
-      letter-spacing: 0.078rem;
-    }
-
-    &__text::before {
-      content: "";
-      background-image: url(../assets/icons/pin.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 22px;
-      height: 32px;
-      display: block;
-      margin-right: 20px;
-    }
+  &__location__text {
+    display: flex;
+    font-weight: 400px;
+    font-size: 20px;
+    font-style: normal;
+    color: $pink-primary;
+    letter-spacing: 0.078rem;
+    text-decoration: none;
+    align-items: center;
   }
 
+  &__location__text::before {
+    content: "";
+    background-image: url(../assets/icons/pin.png);
+    background-repeat: no-repeat;
+    width: 43px;
+    height: 32px;
+    display: block;
+    margin-right: 20px;
+  }
+  .footer__location__textLondon::before {
+    margin-right: 0px;
+  }
   &__img {
-    margin-left: 10rem;
-    margin-top: 1.1rem;
+    background-image: url(../assets/images/footer-puppy.png);
+    width: 300px;
+    height: 310px;
   }
 }
 
-/* -------ADAPTIVE ------*/
-
 @media (max-width: 1279px) and (min-width: 768px) {
-  /* --------NAV --------*/
+  /* -------HEADER------*/
   .header {
-    &__container {
-      max-width: 708px;
-    }
-
-    &__inner {
-      width: 708px;
-      height: 115px;
-    }
-
-    &__content {
-      margin-top: 0;
-      margin-left: 0px;
-    }
-  }
-
-  .nav {
-    margin-top: 0px;
-    &__link {
-      margin-left: 32px;
+    .container {
+      padding: 0 30px;
     }
   }
 
   /* --------START SCREEN-------*/
   .start__screen {
     background-image: url(../assets/images/start-screen-gradient-background768.jpg);
-
-    &__container {
-      max-width: 708px;
+    background-size: 100%;
+    .container {
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      padding: 0 30px;
     }
-
-    &__inner {
-      flex-direction: column;
-    }
-
-    &__heading {
-      margin-top: 35px;
-    }
-
     &__content {
-      padding-bottom: 120px;
-      margin-left: 0px;
+      margin: 0 auto;
+      padding-top: 0;
+      padding-bottom: 70px;
     }
-
-    &__btn {
-      margin-left: 7.7rem;
+    &__heading {
+      margin-top: 30px;
     }
-
+    &__button {
+      margin-left: 126px;
+    }
     &__img {
-      margin-left: 9rem;
-      width: 79%;
-      margin-top: 0;
+      background-size: 569px 593px;
+      width: 569px;
+      height: 593px;
     }
   }
 
   /* -------ABOUT----------*/
   .about {
-    padding-bottom: 0;
-
-    &__inner {
+    .container {
       display: flex;
+      flex-wrap: wrap;
       flex-direction: column-reverse;
-      margin-top: 4.3rem;
-      margin-left: 10.5rem;
-      padding-bottom: 7rem;
+      justify-content: center;
+      padding-top: 75px;
+      padding-bottom: 100px;
+      gap: 57px;
+    }
+    &__content {
+      margin: 0 auto;
     }
     &__heading {
-      margin-bottom: 23px;
+      margin-top: 0;
     }
     &__img {
-      margin-left: 4rem;
-      margin-top: 3.2rem;
+      margin: 0 auto;
     }
   }
 
   /* -------PETS------*/
 
   .pets {
-    height: 877px;
-    width: 768px;
-    padding-top: 0;
-    padding-bottom: 0;
-
     .container {
-      max-width: 768px;
-      margin: 0 auto;
-    }
-
-    &__heading {
-      padding-top: 5.3rem;
-    }
-
-    &__heading__inner {
-      margin-left: 185px;
-      margin-bottom: 4px;
+      padding: 0 30px;
     }
     .slider {
-      width: 768px;
-      margin-left: 0px;
-      margin-top: 5px;
-      &__card {
-        margin-top: 3.7rem;
+      &__wrapper {
+        width: 708px;
       }
       &__card320 {
         display: none;
       }
-      &__wrapper {
-        width: 708px;
-      }
-    }
-    &__btn {
-      margin-left: 0;
     }
   }
+
   /* -------HELP------*/
   .help {
-    margin-top: 5.3rem;
-    height: 698px;
-    &__container {
-      width: 708px;
-    }
-    &__inner {
-      margin-left: 0px;
+    margin-top: 0px;
+    .container {
+      padding: 0 30px;
     }
     &__lists {
       margin-top: 60px;
@@ -813,45 +659,25 @@ body {
 
   /* -------DONATION (IN ADDITION)------*/
   .donation {
-    padding-top: 0px;
-    padding-bottom: 0;
-    height: 774px;
     .container {
-      max-width: 708px;
-    }
-    &__inner {
-      display: flex;
-      flex-direction: column-reverse;
+      padding: 0 30px;
       padding-top: 80px;
-      margin-left: 165px;
-    }
-    &__img {
-      margin-top: 3rem;
-      margin-left: -65px;
+      padding-bottom: 100px;
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      gap: 60px;
     }
   }
-
   /* -------FOOTER------*/
   .footer {
     background-image: url(../assets/images/footer-gradient-background768.png);
-    height: 639px;
-    width: 768px;
-    padding-top: 5px;
-    &__container {
-      max-width: 768px;
-    }
-    &__inner {
-      display: flex;
+    background-size: 100%;
+    padding-top: 15px;
+
+    .container {
       flex-wrap: wrap;
-      padding: 0;
-    }
-    &__contacts {
-      margin-left: 65px;
-      margin-right: 50px;
-    }
-    &__img {
-      margin-left: 14.5rem;
-      margin-top: 3rem;
+      justify-content: center;
+      gap: 65px 60px;
     }
   }
 }
@@ -859,15 +685,12 @@ body {
 @media (max-width: 767px) and (min-width: 320px) {
   /* --------NAV --------*/
   .header {
-    &__container {
-      max-width: 310px;
-    }
-    &__inner {
-      width: 257px;
-    }
-    &__content {
-      margin-top: 10px;
-      margin-left: 0;
+    padding: 30px 0 0 0;
+    height: 90px;
+    .container {
+      padding: 0 10px;
+      margin-right: 43px;
+      height: 60px;
     }
     &__burger {
       display: block;
@@ -907,61 +730,52 @@ body {
   /* --------START SCREEN-------*/
   .start__screen {
     background-image: url(../assets/images/footer-gradient-background320.png);
-
-    &__container {
-      max-width: 300px;
-    }
-
-    &__inner {
-      flex-direction: column;
-      width: 300px;
+    background-size: 100%;
+    .container {
+      padding: 0 10px;
+      padding-top: 30px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
     &__content {
-      width: 320px;
-      height: 320px;
+      width: 300px;
+      align-items: center;
+      padding-top: 0;
+      padding-bottom: 75px;
     }
 
     &__heading {
       font-size: 25px;
       width: 230px;
       text-align: center;
-      margin-left: 35px;
       letter-spacing: 1.4px;
-      margin-top: 45px;
+      margin: 0 auto;
     }
     &__text {
-      width: 200px;
+      width: 300px;
       text-align: center;
+      margin: 0 auto;
     }
-    &__btn {
-      margin-left: 2.7rem;
-    }
-
     &__img {
-      margin-left: 2.5rem;
-      width: 85%;
-      margin-top: 44px;
+      background-size: 260px auto;
+      width: 260px;
+      height: 271px;
     }
   }
 
   /* -------ABOUT----------*/
   .about {
-    max-width: 320px;
-    padding-bottom: 0px;
     .container {
-      max-width: 300px;
-    }
-    &__inner {
-      width: 300px;
-      margin-left: 0;
-      margin-top: 0px;
-      padding-bottom: 3.5rem;
+      padding: 42px 10px 42px 10px;
+      gap: 42px;
+      flex-wrap: wrap;
+      justify-content: center;
       display: flex;
       flex-direction: column-reverse;
     }
     &__content {
       width: 300px;
-      margin-top: 40px;
+      margin-top: 0px;
     }
     &__heading {
       font-size: 25px;
@@ -974,44 +788,36 @@ body {
 
     &__text {
       margin: 0 auto;
-      word-spacing: 1px;
-      width: 280px;
+      max-width: 270px;
       text-align: justify;
       margin-top: 23px;
       margin-left: 15px;
+      line-height: 24px;
     }
     &__img {
-      margin: 0 auto;
-      margin-top: 2.5rem;
-    }
-    &__img__inner {
-      width: 100%;
+      background-size: 260px auto;
+      width: 260px;
       height: 353px;
+      margin: 0 auto;
     }
   }
 
   /* -------PETS------*/
 
   .pets {
-    width: 320px;
-    height: 791px;
-    padding-top: 0;
-    padding-bottom: 0;
-
     .container {
+      padding: 0 10px;
+    }
+    &__inner {
+      padding: 42px 0;
+    }
+    &__headings {
       max-width: 300px;
+      margin: 0 auto;
     }
-
     &__heading {
-      width: 300px;
-      padding-top: 45px;
-    }
-
-    &__heading__inner {
       font-size: 25px;
       width: 300px;
-      margin-left: 0;
-      margin-bottom: 4px;
       letter-spacing: 0.1rem;
     }
     .slider {
@@ -1097,7 +903,11 @@ body {
     width: 320px;
     height: 540px;
     .container {
-      max-width: 300px;
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      padding-top: 42px;
+      padding-bottom: 42px;
+      gap: 42px;
     }
     &__inner {
       display: flex;
@@ -1117,13 +927,11 @@ body {
     &__subheading {
       font-size: 15px;
       letter-spacing: 0px;
-      margin-left: 13px;
       margin-top: 20px;
       margin-bottom: 2.5rem;
     }
     &__img {
       margin-top: 6rem;
-      margin-left: -65px;
     }
     .credit__card {
       color: $pink-primary;
@@ -1133,91 +941,60 @@ body {
         letter-spacing: 0.05rem;
         padding-top: 13px;
         padding-bottom: 13px;
-        padding-left: 60px;
-        margin-left: 10px;
-      }
-      &__inner::before {
-        margin-left: 23px;
       }
     }
     &__text {
-      margin-left: 10px;
       text-align: justify;
       width: 280px;
     }
     &__img {
-      margin: 0 auto;
-      margin-top: 30px;
-      margin-left: 30px;
-    }
-    &__img__inner {
-      width: 95%;
+      background-size: 260px auto;
+      width: 260px;
+      height: 135px;
     }
   }
 
   /* -------FOOTER------*/
   .footer {
     background-image: url(../assets/images/footer-gradient-background320.png);
-    padding-top: 0px;
-    &__inner {
-      width: 300px;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 27px 60px;
-      padding-top: 0px;
-    }
-    &__contacts {
-      align-items: center;
-      display: flex;
+    background-size: 100%;
+    padding-top: 30px;
+    .container {
       flex-direction: column;
-      justify-content: space-between;
-      margin-left: 0;
-      margin-right: 0;
+      row-gap: 40px;
+      justify-content: center;
+      padding: 0 10px;
     }
-    .contact__title {
+    .footer__title {
       font-size: 25px;
       line-height: 32px;
       text-align: center;
-      margin-top: 30px;
       letter-spacing: 0.1rem;
-      margin-bottom: 27px;
     }
-    .contact__mail {
-      width: 250px;
+
+    &__contacts {
+      padding: 0 10px;
+      align-items: center;
+      height: 208px;
     }
-    .contact__phone {
-      margin-top: 45px;
+    &__location {
+      padding: 0;
+      align-items: center;
+      height: 214px;
     }
     .location__title {
       font-size: 25px;
       line-height: 32px;
       text-align: center;
-      margin-left: 18px;
     }
-    .location__boston {
-      margin-top: 42px;
-    }
-    .location__boston__text {
-      font-size: 20px;
-      line-height: 23px;
-      letter-spacing: 0.06em;
-      display: flex;
-      align-items: center;
-    }
-    .location__london__text {
-      font-size: 20px;
-      line-height: 23px;
-      letter-spacing: 0.06em;
-      display: flex;
-      align-items: center;
+    .footer__location__textLondon {
+      padding-right: 28px;
     }
     &__img {
-      margin-left: 0;
-      margin-top: 0;
-    }
-    &__img__inner {
+      background-size: 260px auto;
       width: 260px;
       height: 269px;
+      margin-left: 20px;
     }
   }
 }
