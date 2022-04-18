@@ -196,7 +196,7 @@ body {
   background-color: $white;
   .container {
     display: flex;
-    padding: 80px 30px 90px 30px;
+    padding: 85px 30px 90px 30px;
     justify-content: center;
     gap: 120px;
   }
@@ -606,7 +606,7 @@ body {
       flex-wrap: wrap;
       flex-direction: column-reverse;
       justify-content: center;
-      padding-top: 75px;
+      padding-top: 80px;
       padding-bottom: 100px;
       gap: 57px;
     }
@@ -662,7 +662,7 @@ body {
     .container {
       padding: 0 30px;
       padding-top: 80px;
-      padding-bottom: 100px;
+      padding-bottom: 95px;
       flex-wrap: wrap;
       flex-direction: column-reverse;
       gap: 60px;
@@ -821,15 +821,11 @@ body {
       letter-spacing: 0.1rem;
     }
     .slider {
-      width: 320px;
-      margin-left: 0px;
-      margin-top: 5px;
+      width: 300px;
+      padding-bottom: 37px;
       .slider__card {
-        margin-top: 2.5rem;
-        margin-left: 0;
-      }
-      &__card {
         order: -1;
+        margin-top: 2.5rem;
       }
       &__card768 {
         display: none;
@@ -840,27 +836,25 @@ body {
       &__wrapper {
         flex-wrap: wrap;
         width: 300px;
+        margin: 0 auto;
+        align-items: center;
       }
       &__btn {
-        margin-top: 20px;
+        margin-top: 17px;
         margin-bottom: 20px;
-        margin-left: 50px;
+        margin-left: 57px;
         margin-right: 25px;
       }
-    }
-    .pets__btn {
-      margin-top: 35px;
     }
   }
   /* -------HELP------*/
   .help {
-    margin-top: 0;
-    padding-bottom: 215px;
-    &__container {
-      width: 300px;
+    .container {
+      padding: 0 10px;
     }
     &__inner {
-      margin-left: 0px;
+      padding-top: 0;
+      padding-bottom: 35px;
     }
     &__heading {
       font-size: 25px;
@@ -870,13 +864,14 @@ body {
       margin-top: 40px;
     }
     &__lists {
-      margin-top: 40px;
-      max-width: 280px;
-      justify-content: space-between;
-      gap: 30px 20px;
+      justify-content: flex-start;
+      margin: 0 auto;
+      gap: 30px;
+      margin-top: 45px;
+      margin-left: 5px;
     }
     &__list {
-      width: 117px;
+      width: 130px;
     }
     &__list__text {
       font-size: 15px;
@@ -898,40 +893,32 @@ body {
 
   /* -------DONATION (IN ADDITION)------*/
   .donation {
-    padding-top: 0;
-    padding-bottom: 0px;
-    width: 320px;
-    height: 540px;
     .container {
       flex-wrap: wrap;
       flex-direction: column-reverse;
-      padding-top: 42px;
-      padding-bottom: 42px;
       gap: 42px;
+      padding: 0 10px;
     }
-    &__inner {
-      display: flex;
-      flex-direction: column-reverse;
-      padding-top: 41px;
-      margin-left: 0;
-      width: 300px;
+    &__content {
+      padding-top: 42px;
     }
     &__heading {
       font-size: 25px;
       text-align: center;
       width: 220px;
-      line-height: 2.1rem;
+      line-height: 2rem;
       letter-spacing: 0.1rem;
       margin: 0 auto;
     }
     &__subheading {
       font-size: 15px;
       letter-spacing: 0px;
-      margin-top: 20px;
-      margin-bottom: 2.5rem;
+      margin-top: 25px;
+      margin-bottom: 2.4rem;
     }
     &__img {
-      margin-top: 6rem;
+      margin-top: 0;
+      padding-bottom: 39px;
     }
     .credit__card {
       color: $pink-primary;
