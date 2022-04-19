@@ -299,7 +299,7 @@ body {
   background-color: #f1cdb3;
 }
 .pets .slider__card__name {
-  margin-top: 1.5rem;
+  margin-top: 1.6rem;
   font-weight: 400;
   font-size: 20px;
   color: #545454;
@@ -827,7 +827,6 @@ body {
     background-size: 260px auto;
     width: 260px;
     height: 271px;
-    margin: 0 auto;
   }
 
   /* -------ABOUT----------*/
