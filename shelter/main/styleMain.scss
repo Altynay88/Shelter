@@ -60,12 +60,14 @@ body {
   padding: 0 40px;
 }
 
-/*--------- HEADER--------- */
-.header {
+.main-page {
   background-image: url(../assets/images/start-screen-gradient-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-size: 100%;
+}
+/*--------- HEADER--------- */
+.header {
   display: flex;
   height: 120px;
   top: 0;
@@ -134,10 +136,6 @@ body {
 
 /* --------START SCREEN-------*/
 .start__screen {
-  background-image: url(../assets/images/start-screen-gradient-background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-size: 100%;
   .container {
     display: flex;
     justify-content: space-between;
@@ -566,6 +564,10 @@ body {
 
 @media (max-width: 1279px) and (min-width: 768px) {
   /* -------HEADER------*/
+  .main-page {
+    background-image: url(../assets/images/start-screen-gradient-background768.jpg);
+    background-size: 100%;
+  }
   .header {
     .container {
       padding: 0 30px;
@@ -574,8 +576,6 @@ body {
 
   /* --------START SCREEN-------*/
   .start__screen {
-    background-image: url(../assets/images/start-screen-gradient-background768.jpg);
-    background-size: 100%;
     .container {
       flex-wrap: wrap;
       justify-content: flex-end;
@@ -684,6 +684,11 @@ body {
 
 @media (max-width: 767px) and (min-width: 320px) {
   /* --------NAV --------*/
+  .main-page {
+    background-image: url(../assets/images/footer-gradient-background320.png);
+    background-size: 100%;
+    background-size: cover;
+  }
   .header {
     padding: 30px 0 0 0;
     height: 90px;
@@ -729,8 +734,6 @@ body {
 
   /* --------START SCREEN-------*/
   .start__screen {
-    background-image: url(../assets/images/footer-gradient-background320.png);
-    background-size: 100%;
     .container {
       padding: 0 10px;
       padding-top: 30px;

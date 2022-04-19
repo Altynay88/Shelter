@@ -47,12 +47,15 @@ body {
   padding: 0 40px;
 }
 
-/*--------- HEADER--------- */
-.header {
+.main-page {
   background-image: url(../assets/images/start-screen-gradient-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-size: 100%;
+}
+
+/*--------- HEADER--------- */
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,12 +136,6 @@ body {
 }
 
 /* --------START SCREEN-------*/
-.start__screen {
-  background-image: url(../assets/images/start-screen-gradient-background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-size: 100%;
-}
 .start__screen .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -622,15 +619,16 @@ body {
 
 @media (max-width: 1279px) and (min-width: 768px) {
   /* -------HEADER------*/
+  .main-page {
+    background-image: url(../assets/images/start-screen-gradient-background768.jpg);
+    background-size: 100%;
+  }
+
   .header .container {
     padding: 0 30px;
   }
 
   /* --------START SCREEN-------*/
-  .start__screen {
-    background-image: url(../assets/images/start-screen-gradient-background768.jpg);
-    background-size: 100%;
-  }
   .start__screen .container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -746,6 +744,12 @@ body {
 }
 @media (max-width: 767px) and (min-width: 320px) {
   /* --------NAV --------*/
+  .main-page {
+    background-image: url(../assets/images/footer-gradient-background320.png);
+    background-size: 100%;
+    background-size: cover;
+  }
+
   .header {
     padding: 30px 0 0 0;
     height: 90px;
@@ -789,10 +793,6 @@ body {
   }
 
   /* --------START SCREEN-------*/
-  .start__screen {
-    background-image: url(../assets/images/footer-gradient-background320.png);
-    background-size: 100%;
-  }
   .start__screen .container {
     padding: 0 10px;
     padding-top: 30px;
