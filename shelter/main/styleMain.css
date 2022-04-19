@@ -809,6 +809,7 @@ body {
             align-items: center;
     padding-top: 0;
     padding-bottom: 75px;
+    margin: 0 auto;
   }
   .start__screen__heading {
     font-size: 25px;
@@ -826,6 +827,7 @@ body {
     background-size: 260px auto;
     width: 260px;
     height: 271px;
+    margin: 0 auto;
   }
 
   /* -------ABOUT----------*/
@@ -848,6 +850,7 @@ body {
   .about__content {
     width: 300px;
     margin-top: 0px;
+    margin: 0 auto;
   }
   .about__heading {
     font-size: 25px;
@@ -946,6 +949,10 @@ body {
   }
   .help__list {
     width: 130px;
+    margin: 0 auto;
+  }
+  .help__list-last {
+    margin-left: 1.2px;
   }
   .help__list__text {
     font-size: 15px;
@@ -1051,6 +1058,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
     height: 214px;
+    margin: 0 auto;
   }
   .footer .location__title {
     font-size: 25px;
@@ -1065,5 +1073,6 @@ body {
     width: 260px;
     height: 269px;
     margin-left: 20px;
+    margin: 0 auto;
   }
 }

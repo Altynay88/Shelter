@@ -745,6 +745,7 @@ body {
       align-items: center;
       padding-top: 0;
       padding-bottom: 75px;
+      margin: 0 auto;
     }
 
     &__heading {
@@ -763,6 +764,7 @@ body {
       background-size: 260px auto;
       width: 260px;
       height: 271px;
+      margin: 0 auto;
     }
   }
 
@@ -779,6 +781,7 @@ body {
     &__content {
       width: 300px;
       margin-top: 0px;
+      margin: 0 auto;
     }
     &__heading {
       font-size: 25px;
@@ -875,6 +878,10 @@ body {
     }
     &__list {
       width: 130px;
+      margin: 0 auto;
+    }
+    &__list-last {
+      margin-left: 1.2px;
     }
     &__list__text {
       font-size: 15px;
@@ -971,6 +978,7 @@ body {
       padding: 0;
       align-items: center;
       height: 214px;
+      margin: 0 auto;
     }
     .location__title {
       font-size: 25px;
@@ -985,6 +993,7 @@ body {
       width: 260px;
       height: 269px;
       margin-left: 20px;
+      margin: 0 auto;
     }
   }
 }
