@@ -535,6 +535,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
     height: 214px;
+    margin: 0 auto;
   }
   .footer .location__title {
     font-size: 25px;
@@ -549,5 +550,6 @@ body {
     width: 260px;
     height: 269px;
     margin-left: 20px;
+    margin: 0 auto;
   }
 }
