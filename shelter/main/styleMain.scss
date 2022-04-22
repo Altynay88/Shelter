@@ -48,6 +48,10 @@ body {
   font-family: "Georgia";
 }
 
+.body._lock {
+  overflow: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -108,11 +112,16 @@ body {
 
 /* --------NAV --------*/
 .nav {
-  display: flex;
-  font-family: "Arial";
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 24px;
+  ul {
+    display: flex;
+    font-family: "Arial";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  li {
+    list-style-type: none;
+  }
 
   &__link {
     margin-left: 36px;
@@ -562,6 +571,76 @@ body {
   }
 }
 
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 41, 41, 0.6);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.8s ease 0s;
+  &__body {
+    width: 900px;
+    height: 500px;
+    background-color: $white;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 9px;
+    margin-top: 70px;
+    position: relative;
+  }
+  &__close {
+    border: 2px solid $pink-primary;
+    border-radius: 100px;
+    width: 52px;
+    height: 52px;
+    cursor: pointer;
+    position: absolute;
+    background-color: transparent;
+    margin-top: 20px;
+    margin-left: 1120px;
+  }
+  &__content {
+    width: 351px;
+    margin-top: 50px;
+    margin-left: 30px;
+  }
+  img {
+    height: 500px;
+    width: 500px;
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 35px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  &__subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+  &__text {
+    font-size: 15px;
+    font-weight: 400px;
+    margin-bottom: 40px;
+  }
+  ul {
+    margin-left: 15px;
+    line-height: 30px;
+  }
+  li {
+    color: $pink-primary;
+  }
+  li span {
+    color: $dark-3xl-texts;
+  }
+}
+
 @media (max-width: 1279px) and (min-width: 768px) {
   /* -------HEADER------*/
   .main-page {
@@ -692,44 +771,71 @@ body {
   .header {
     padding: 30px 0 0 0;
     height: 90px;
+    .header__logo {
+      z-index: 5;
+    }
     .container {
       padding: 0 10px;
       margin-right: 43px;
       height: 60px;
     }
-    &__burger {
-      display: block;
-      position: relative;
+    .burger {
+      display: inline-block;
+      cursor: pointer;
+      z-index: 5;
+    }
+    .burger-bar1,
+    .burger-bar2,
+    .burger-bar3 {
       width: 30px;
-      height: 20px;
-    }
-    &__burger span {
-      position: absolute;
-      background-color: $pink-primary;
-      left: 0;
-      width: 100%;
       height: 2px;
-      top: 9px;
-    }
-    &__burger:before,
-    &__burger:after {
-      content: "";
       background-color: $pink-primary;
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      left: 0;
+      margin: 8px 0;
+      transition: 0.3s;
     }
-    &__burger:before {
-      top: 0;
-    }
-    &__burger:after {
-      bottom: 0;
-    }
-  }
 
-  .nav {
-    display: none;
+    ._active .burger-bar1 {
+      transform: rotate(-90deg) translate(-10px, 10px);
+    }
+    ._active .burger-bar2 {
+      transform: rotate(-90deg) translate(0px, -10px);
+    }
+    ._active .burger-bar3 {
+      transform: rotate(-90deg) translate(10px, 0px);
+    }
+
+    .nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 320px;
+      height: 100%;
+      padding: 90px 0 90px 0;
+      transition: right 0.9s ease 0s;
+      transform: translate(0px, 0px);
+      background: $dark-3xl-texts;
+    }
+    .nav._active {
+      right: 0;
+    }
+    ul {
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      height: 100vh;
+      margin-top: 15px;
+    }
+    li {
+      margin: 0 auto;
+      font-size: 32px;
+      line-height: 51px;
+      color: $light-s-white;
+    }
+    .nav__link {
+      margin-left: 0px;
+    }
   }
 
   /* --------START SCREEN-------*/

@@ -19,18 +19,30 @@
           </a>
           <p class="header__logo-subtitle">Shelter for pets in Boston</p>
         </div>
-        <div class="header__burger">
-          <span></span>
+        <div class="burger">
+          <div class="burger-bar1"></div>
+          <div class="burger-bar2"></div>
+          <div class="burger-bar3"></div>
         </div>
         <nav class="nav">
-          <a class="nav__link" href="../main/indexMain.html"
-            >About the shelter</a
-          >
-          <a class="nav__link-active" href="#">Our pets</a>
-          <a class="nav__link" href="../main/indexMain.html#help"
-            >Help the shelter</a
-          >
-          <a class="nav__link" href="#contacts">Contacts</a>
+          <ul>
+            <li>
+              <a class="nav__link" href="../main/indexMain.html"
+                >About the shelter</a
+              >
+            </li>
+            <li><a class="nav__link-active" href="#">Our pets</a></li>
+            <li>
+              <a data-goto=".help" class="nav__link" href="#help"
+                >Help the shelter</a
+              >
+            </li>
+            <li>
+              <a data-goto=".footer" class="nav__link" href="#contacts"
+                >Contacts</a
+              >
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
@@ -182,5 +194,5 @@
       </div>
     </footer>
   </body>
-  <script src="script.js"></script>
+  <script src="scriptPets.js"></script>
 </html>
