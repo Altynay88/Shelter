@@ -9,7 +9,7 @@
     <title>Document</title>
   </head>
 
-  <body>
+  <body class="body">
     <!--HEADER-->
     <div class="main-page">
     <header class="header">
@@ -20,14 +20,18 @@
           </a>
           <p class="header__logo-subtitle">Shelter for pets in Boston</p>
         </div>
-        <div class="header__burger">
-          <span></span>
+          <div class="burger">
+          <div class="burger-bar1"></div>
+           <div class="burger-bar2"></div>
+            <div class="burger-bar3"></div>
         </div>
         <nav class="nav">
-          <a class="nav__link-active" href="#">About the shelter</a>
-          <a class="nav__link" href="../pets/indexPets.html">Our pets</a>
-          <a class="nav__link" href="#help">Help the shelter</a>
-          <a class="nav__link" href="#contacts">Contacts</a>
+        <ul>
+          <li> <a class="nav__link-active" href="#">About the shelter</a></li>
+          <li><a class="nav__link" href="../pets/indexPets.html">Our pets</a></li>
+          <li> <a data-goto=".help" class="nav__link" href="#help">Help the shelter</a></li>
+          <li><a data-goto=".footer" class="nav__link" href="#contacts">Contacts</a></li>
+        </ul>
         </nav>
       </div>
     </header>
@@ -305,6 +309,23 @@
         </div>
       </div>
     </footer>
+    <div id="popup" class="popup">
+                <button class="popup__close" >X</button>
+      <div class="popup__body">
+        <img class="slider__card__img" src="../assets/images/pets-jennifer.png" alt="">
+        <div class="popup__content">
+          <div class="popup__title">Jennifer</div>
+          <div class="popup__subtitle">Dog - Labrador</div>
+          <div class="popup__text">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</div>
+          <ul>
+            <li><span>Age: 2 months</span></li>
+            <li><span>Inoculations: none</span></li>
+            <li><span>Diseases: none</span></li>
+            <li><span>Parasites: none</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </body>
-  <script src="script.js"></script>
+  <script src="scriptMain.js"></script>
 </html>
