@@ -52,9 +52,10 @@ body {
   overflow: hidden;
 }
 
-// .body._lock .header__logo {
-//   opacity: 0;
-// }
+.body._lock .header__logo {
+  opacity: 0;
+}
+
 .block-page._active {
   position: fixed;
   width: 100vw;
@@ -96,6 +97,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .burger__logo {
+    display: none;
   }
   a {
     text-decoration: none;
@@ -858,19 +862,18 @@ body {
       cursor: pointer;
       z-index: 5;
     }
-    // .burger__logo {
-    //   display: block;
-    //   opacity: 0;
-    //   position: absolute;
-    //   top: 30px;
-    //   left: 10px;
-    //   transition: right 0.9s ease 0s;
-    // }
-    // .burger__logo._active {
-    //   opacity: 1;
-    //   z-index: 5;
-    //   transition: right 0.9s ease 0s;
-    // }
+    .burger__logo {
+      display: block;
+      position: absolute;
+      top: 30px;
+      left: 10px;
+      transition: right 0.9s ease 0s;
+    }
+    .burger__logo._active {
+      opacity: 1;
+      z-index: 5;
+      transition: right 0.9s ease 0s;
+    }
     .burger-bar1,
     .burger-bar2,
     .burger-bar3 {
