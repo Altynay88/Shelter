@@ -13,7 +13,7 @@ if (nav) {
     burger.classList.toggle("_active");
     nav.classList.toggle("_active");
     blockPage.classList.toggle("_active");
-    // burgerLogo.classList.toggle("_active");
+    burgerLogo.classList.toggle("_active");
   });
 }
 
@@ -22,7 +22,7 @@ nav.addEventListener("click", () => {
   burger.classList.remove("_active");
   nav.classList.remove("_active");
   blockPage.classList.remove("_active");
-  // burgerLogo.classList.remove("_active");
+  burgerLogo.classList.remove("_active");
 });
 
 blockPage.addEventListener("click", () => {
@@ -30,7 +30,7 @@ blockPage.addEventListener("click", () => {
   burger.classList.remove("_active");
   nav.classList.remove("_active");
   blockPage.classList.remove("_active");
-  // burgerLogo.classList.remove("_active");
+  burgerLogo.classList.remove("_active");
 });
 
 // POPUP //
