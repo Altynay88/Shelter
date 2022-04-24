@@ -52,6 +52,16 @@ body {
   overflow: hidden;
 }
 
+// .body._lock .header__logo {
+//   opacity: 0;
+// }
+.block-page._active {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(41, 41, 41, 0.6);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -571,6 +581,7 @@ body {
   }
 }
 
+/* -------POPUP------*/
 .popup {
   position: fixed;
   width: 100%;
@@ -578,39 +589,70 @@ body {
   background-color: rgba(41, 41, 41, 0.6);
   top: 0;
   left: 0;
-  opacity: 0;
-  visibility: hidden;
+  align-items: center;
+  display: none;
   overflow-y: auto;
   overflow-x: hidden;
   transition: all 0.8s ease 0s;
+
+  &.showPopup {
+    display: inline-block;
+  }
   &__body {
     width: 900px;
     height: 500px;
     background-color: $white;
     display: flex;
     margin: 0 auto;
-    border-radius: 9px;
-    margin-top: 70px;
+    border-radius: 20px;
+    top: 52px;
     position: relative;
+    z-index: 10;
   }
   &__close {
+    position: absolute;
+    right: 150px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
     border: 2px solid $pink-primary;
     border-radius: 100px;
-    width: 52px;
-    height: 52px;
-    cursor: pointer;
-    position: absolute;
     background-color: transparent;
-    margin-top: 20px;
-    margin-left: 1120px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  &__close::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 17px;
+    transform: rotate(0deg) translateX(-50%) translateY(-50%);
+  }
+
+  &__close::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 17px;
+    height: 2px;
+    transform: rotate(0deg) translateX(-50%) translateY(-50%);
+  }
+  &__close:hover {
+    background-color: #fddcc4;
   }
   &__content {
     width: 351px;
     margin-top: 50px;
     margin-left: 30px;
   }
-  img {
-    height: 500px;
+  &__img {
     width: 500px;
   }
   &__title {
@@ -634,10 +676,15 @@ body {
     line-height: 30px;
   }
   li {
+    color: $dark-3xl-texts;
+    font-weight: bold;
+  }
+  li::marker {
     color: $pink-primary;
   }
   li span {
     color: $dark-3xl-texts;
+    font-weight: normal;
   }
 }
 
@@ -715,7 +762,34 @@ body {
       }
     }
   }
-
+  /* -------POPUP------*/
+  .popup {
+    &__body {
+      width: 630px;
+      height: auto;
+      min-height: 350px;
+      margin-top: 70px;
+    }
+    &__content {
+      margin-top: 10px;
+      margin-left: 11px;
+      row-gap: 20px;
+      width: 250px;
+    }
+    &__close {
+      top: 80px;
+      right: 20px;
+    }
+    &__img {
+      width: 350px;
+    }
+    &__text {
+      font-size: 13px;
+    }
+    ul {
+      padding-bottom: 10px;
+    }
+  }
   /* -------HELP------*/
   .help {
     margin-top: 0px;
@@ -784,6 +858,19 @@ body {
       cursor: pointer;
       z-index: 5;
     }
+    // .burger__logo {
+    //   display: block;
+    //   opacity: 0;
+    //   position: absolute;
+    //   top: 30px;
+    //   left: 10px;
+    //   transition: right 0.9s ease 0s;
+    // }
+    // .burger__logo._active {
+    //   opacity: 1;
+    //   z-index: 5;
+    //   transition: right 0.9s ease 0s;
+    // }
     .burger-bar1,
     .burger-bar2,
     .burger-bar3 {
@@ -825,7 +912,6 @@ body {
       justify-content: center;
       gap: 40px;
       height: 100vh;
-      margin-top: 15px;
     }
     li {
       margin: 0 auto;
@@ -956,6 +1042,38 @@ body {
         margin-left: 57px;
         margin-right: 25px;
       }
+    }
+  }
+
+  /* -------POPUP------*/
+  .popup {
+    &__body {
+      height: auto;
+      margin-top: 60px;
+      width: 240px;
+      border-radius: 9px;
+    }
+    &__content {
+      margin-top: 20px;
+      width: 220px;
+      margin-left: 10px;
+    }
+    &__close {
+      right: 10px;
+      top: 60px;
+    }
+    &__subtitle {
+      margin-bottom: 20px;
+    }
+    &__img {
+      display: none;
+    }
+    &__text {
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+    ul {
+      padding-bottom: 10px;
     }
   }
   /* -------HELP------*/

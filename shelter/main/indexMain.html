@@ -11,6 +11,7 @@
 
   <body class="body">
     <!--HEADER-->
+    <div class="block-page"></div>
     <div class="main-page">
     <header class="header">
       <div class="container">
@@ -25,6 +26,12 @@
            <div class="burger-bar2"></div>
             <div class="burger-bar3"></div>
         </div>
+         <!-- <div class="burger__logo">
+          <a href="../main/indexMain.html">
+            <h1 class="header__title">Cozy House</h1>
+          </a>
+          <p class="header__logo-subtitle">Shelter for pets in Boston</p>
+        </div> -->
         <nav class="nav">
         <ul>
           <li> <a class="nav__link-active" href="#">About the shelter</a></li>
@@ -108,7 +115,7 @@
                 <button class="slider__btn slider__btn__left">
                   <img src="../assets/icons/Arrow.png" alt="" />
                 </button>
-                <div class="slider__card">
+                <div class="slider__card" onclick="openModal()">
                   <img
                     class="slider__card__img"
                     src="../assets/images/pets-katrine.png"
@@ -118,24 +125,24 @@
                   <button class="slider__card__btn">Learn more</button>
                 </div>
 
-                <div class="slider__card slider__card768">
+                <div class="slider__card slider__card768"  onclick="openModal()" >
                   <img
                     class="slider__card__img"
                     src="../assets/images/pets-jennifer.png"
                     alt="Jennifer"
                   />
                   <p class="slider__card__name">Jennifer</p>
-                  <button class="slider__card__btn">Learn more</button>
+                  <button class="slider__card__btn" >Learn more</button>
                 </div>
 
-                <div class="slider__card slider__card320">
+                <div class="slider__card slider__card320"  onclick="openModal()">
                   <img
                     class="slider__card__img"
                     src="../assets/images/pets-woody.png"
                     alt="Woody"
                   />
                   <p class="slider__card__name">Woody</p>
-                  <button class="slider__card__btn">Learn more</button>
+                  <button class="slider__card__btn" >Learn more</button>
                 </div>
                 <button class="slider__btn slider__btn__right">
                   <img src="../assets/icons/ArrowNext.png" alt="" />
@@ -151,6 +158,25 @@
           </div>
         </div>
       </div>
+      
+      <!-- POPUP-->
+    <div id="popup" class="popup">
+                <button class="popup__close"></button>
+      <div class="popup__body">
+        <img class="popup__img"></img>
+        <div class="popup__content">
+          <div class="popup__title"></div>
+          <div class="popup__subtitle"></div>
+          <div class="popup__text"></div>
+          <ul>
+            <li>Age: <span class="popup-age"></span></li>
+            <li>Inoculations: <span class="popup-inoculations"></span></li>
+            <li> Diseases: <span class="popup-diseases">  </span></li>
+            <li> Parasites: <span class="popup-parasites"></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
       <!--HELP-->
       <div class="help">
@@ -309,23 +335,6 @@
         </div>
       </div>
     </footer>
-    <div id="popup" class="popup">
-                <button class="popup__close" >X</button>
-      <div class="popup__body">
-        <img class="slider__card__img" src="../assets/images/pets-jennifer.png" alt="">
-        <div class="popup__content">
-          <div class="popup__title">Jennifer</div>
-          <div class="popup__subtitle">Dog - Labrador</div>
-          <div class="popup__text">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</div>
-          <ul>
-            <li><span>Age: 2 months</span></li>
-            <li><span>Inoculations: none</span></li>
-            <li><span>Diseases: none</span></li>
-            <li><span>Parasites: none</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
   </body>
   <script src="scriptMain.js"></script>
 </html>
