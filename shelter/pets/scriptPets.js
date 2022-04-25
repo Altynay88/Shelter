@@ -44,6 +44,11 @@ const popupViews = function (popupClick) {
   document.body.classList.toggle("_lock");
 };
 
+closePopupBtn.addEventListener("click", () => {
+  popup.classList.remove("showPopup");
+  document.body.classList.remove("_lock");
+});
+
 popupBtns.forEach((popupBtn, i) => {
   popupBtn.addEventListener("click", () => {
     popupViews(i);
@@ -56,6 +61,7 @@ function openModal() {
     .then((data) => {
       console.log(data);
       popup.classList.add("showPopup");
+      document.body.classList.toggle("_lock");
       document.querySelector(".popup__img").src = data[0].img;
       document.querySelector(".popup__title").innerText = data[0].name;
       document.querySelector(".popup__subtitle").innerText = data[0].breed;

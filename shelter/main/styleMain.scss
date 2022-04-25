@@ -61,6 +61,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: rgba(41, 41, 41, 0.6);
+  overflow: hidden;
 }
 
 * {
@@ -295,8 +296,20 @@ body {
       display: flex;
       text-align: center;
       margin: 0 auto;
+      gap: 40px;
     }
-
+    &__outer__wrapper {
+      display: flex;
+      width: 82.5%;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      height: 470px;
+    }
+    &__inner__wrapper :nth-child(1) {
+      left: -200%;
+    }
     .slider__card {
       width: 270px;
       height: 435px;
@@ -601,6 +614,7 @@ body {
 
   &.showPopup {
     display: inline-block;
+    overflow: hidden;
   }
   &__body {
     width: 900px;
@@ -615,7 +629,7 @@ body {
   }
   &__close {
     position: absolute;
-    right: 150px;
+    right: 130px;
     top: 10px;
     width: 50px;
     height: 50px;

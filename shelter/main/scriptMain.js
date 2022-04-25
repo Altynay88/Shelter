@@ -18,7 +18,6 @@ if (nav) {
 }
 
 nav.addEventListener("click", () => {
-  document.body.classList.remove("_lock");
   burger.classList.remove("_active");
   nav.classList.remove("_active");
   blockPage.classList.remove("_active");
@@ -26,7 +25,6 @@ nav.addEventListener("click", () => {
 });
 
 blockPage.addEventListener("click", () => {
-  document.body.classList.remove("_lock");
   burger.classList.remove("_active");
   nav.classList.remove("_active");
   blockPage.classList.remove("_active");
@@ -39,32 +37,48 @@ const popup = document.querySelector(".popup");
 const popupBtns = document.querySelectorAll(".slider__card");
 const closePopupBtn = document.querySelector(".popup__close");
 
-const popupViews = function (popupClick) {
+const popupViews = function () {
   popup.classList.add("showPopup");
   document.body.classList.toggle("_lock");
+  blockPage.classList.toggle("_active");
 };
 
-popupBtns.forEach((popupBtn, i) => {
-  popupBtn.addEventListener("click", () => {
-    popupViews(i);
-  });
+closePopupBtn.addEventListener("click", () => {
+  popup.classList.remove("showPopup");
+  blockPage.classList.remove("_active");
 });
 
-function openModal() {
+popup.addEventListener("click", () => {
+  popup.classList.remove("showPopup");
+  blockPage.classList.remove("_active");
+});
+
+function addEventListeners() {
+  window.addEventListener("DOMContentLoaded", () => {
+    loadJSON();
+  });
+}
+
+function openModal(name) {
   fetch("pets.json")
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
-      popup.classList.add("showPopup");
-      document.querySelector(".popup__img").src = data[0].img;
-      document.querySelector(".popup__title").innerText = data[0].name;
-      document.querySelector(".popup__subtitle").innerText = data[0].breed;
-      document.querySelector(".popup__text").innerText = data[0].description;
-      document.querySelector(".popup-age").innerText = data[0].age;
-      document.querySelector(".popup-inoculations").innerText =
-        data[0].inoculations;
-      document.querySelector(".popup-diseases").innerText = data[0].diseases;
-      document.querySelector(".popup-parasites").innerText = data[0].parasites;
+      document.body.classList.toggle("_lock");
+      let html = "";
+      data.forEach((data) => {
+        let pets = name.getAttribute("data-name");
+        console.log(pets);
+        console.log(data);
+        html += popup.classList.add("showPopup");
+        document.querySelector(".popup__img").src = data.img;
+        document.querySelector(".popup__title").innerText = data.name;
+        document.querySelector(".popup__subtitle").innerText = data.breed;
+        document.querySelector(".popup__text").innerText = data.description;
+        document.querySelector(".popup-age").innerText = data.age;
+        document.querySelector(".popup-inoculations").innerText =
+          data.inoculations;
+        document.querySelector(".popup-diseases").innerText = data.diseases;
+        document.querySelector(".popup-parasites").innerText = data.parasites;
+      });
     });
 }
-
