@@ -255,7 +255,7 @@ body {
 .pets {
   background-color: $light-l;
   padding-bottom: 15px;
-  &__inner {
+  .container {
     padding-top: 80px;
     padding-bottom: 100px;
     display: flex;
@@ -277,7 +277,11 @@ body {
   }
 
   .slider {
-    width: 100%;
+    width: 1200px;
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    gap: 40px;
     padding-bottom: 75px;
     &__btn {
       border: 2px solid $pink-primary;
@@ -291,26 +295,32 @@ body {
     &__btn:hover {
       background-color: $pink-primary;
     }
-
-    &__wrapper {
-      width: 1200px;
+    .slider__outer__wrapper {
       display: flex;
-      text-align: center;
-      margin: 0 auto;
-      gap: 40px;
-    }
-    &__outer__wrapper {
-      display: flex;
-      width: 82.5%;
+      width: 990px;
       justify-content: space-between;
       align-items: center;
       position: relative;
       overflow: hidden;
       height: 470px;
     }
-    &__inner__wrapper :nth-child(1) {
-      left: -200%;
+    .slider__inner__wrapper {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      column-gap: 90px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: 0.3s;
     }
+    .slider__inner__wrapper:nth-child(1) {
+      left: -110%;
+    }
+    .slider__inner__wrapper:nth-child(3) {
+      left: 110%;
+    }
+
     .slider__card {
       width: 270px;
       height: 435px;
@@ -357,6 +367,7 @@ body {
 .pets__btn {
   margin: 0 auto;
   text-align: center;
+  z-index: 5;
 }
 
 .pets__inner__btn {
@@ -374,6 +385,34 @@ body {
 
 .pets__inner__btn:hover {
   background-color: #fddcc4;
+}
+
+@keyframes move-right {
+  from {
+    left: -990px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 1s;
+}
+
+@keyframes move-left {
+  from {
+    left: -990px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 1s;
 }
 
 /* -------HELP------*/
@@ -769,18 +808,46 @@ body {
   /* -------PETS------*/
 
   .pets {
+    padding-top: 30px;
     .container {
       padding: 0 30px;
     }
     .slider {
-      &__wrapper {
-        width: 708px;
+      width: 100%;
+      padding: 60px 0;
+      position: relative;
+      .slider__outer__wrapper {
+        width: 650px;
+      }
+      .slider__inner__wrapper {
+        gap: 40px;
       }
       &__card320 {
         display: none;
       }
     }
+    &__btn {
+      margin-bottom: 30px;
+    }
   }
+
+  @keyframes move-right {
+    from {
+      left: 0px;
+    }
+    to {
+      left: -620px;
+    }
+  }
+  @keyframes move-left {
+    from {
+      left: -620px;
+    }
+    to {
+      left: 0px;
+    }
+  }
+
   /* -------POPUP------*/
   .popup {
     &__body {
@@ -1022,9 +1089,8 @@ body {
   .pets {
     .container {
       padding: 0 10px;
-    }
-    &__inner {
-      padding: 42px 0;
+      padding-bottom: 42px;
+      padding-top: 42px;
     }
     &__headings {
       max-width: 300px;
@@ -1036,11 +1102,19 @@ body {
       letter-spacing: 0.1rem;
     }
     .slider {
-      width: 300px;
+      display: block;
+      width: 350px;
       padding-bottom: 37px;
       .slider__card {
         order: -1;
         margin-top: 2.5rem;
+      }
+      .slider__outer__wrapper {
+        width: 300px;
+      }
+      .slider__inner__wrapper {
+        gap: 40px;
+        padding-bottom: 18px;
       }
       &__card768 {
         display: none;
@@ -1048,18 +1122,29 @@ body {
       &__card320 {
         display: none;
       }
-      &__wrapper {
-        flex-wrap: wrap;
-        width: 300px;
-        margin: 0 auto;
-        align-items: center;
-      }
       &__btn {
         margin-top: 17px;
         margin-bottom: 20px;
         margin-left: 57px;
         margin-right: 25px;
       }
+    }
+  }
+
+  @keyframes move-right {
+    from {
+      left: 0px;
+    }
+    to {
+      left: -310px;
+    }
+  }
+  @keyframes move-left {
+    from {
+      left: -310px;
+    }
+    to {
+      left: 0px;
     }
   }
 

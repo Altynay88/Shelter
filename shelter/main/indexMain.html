@@ -93,7 +93,6 @@
   <div class="pets">
     <div class="container">
       <a name="ourfriends"></a>
-      <div class="pets__inner">
         <div class="pets__headings">
           <h3 class="pets__heading">
             Our friends who
@@ -102,28 +101,27 @@
         </div>
 
         <div class="slider">
-          <div class="slider__wrapper">
-            <button class="slider__btn slider__btn__left">
+            <button class="slider__btn slider__btn__left" id="btn-left">
               <img src="../assets/icons/Arrow.png" alt="" />
             </button>
-            <div class="slider__outer__wrapper">
+            <div class="slider__outer__wrapper" id="carousel" >
               <div class="slider__inner__wrapper" id="slider_left">
                 <div class="slider__card" data-name="Sophia" onclick="openModal(this)">
                   <img class="slider__card__img" src="../assets/images/pets-sofia.png" alt="Sophia" />
                   <p class="slider__card__name">Sophia</p>
-                  <button class="slider__card__btn">Learn more</button>
+                  <button data-name="Sophia" class="slider__card__btn">Learn more</button>
                 </div>
 
                 <div class="slider__card slider__card768" data-name="Timmy" onclick="openModal(this)">
                   <img class="slider__card__img" src="../assets/images/pets-timmy.png" alt="Timmy" />
                   <p class="slider__card__name">Timmy</p>
-                  <button class="slider__card__btn">Learn more</button>
+                  <button data-name="Timmy"  class="slider__card__btn">Learn more</button>
                 </div>
 
                 <div class="slider__card slider__card320" data-name="Charly" onclick="openModal(this)">
                   <img class="slider__card__img" src="../assets/images/pets-charly.png" alt="Charly" />
                   <p class="slider__card__name">Charly</p>
-                  <button class="slider__card__btn">Learn more</button>
+                  <button  data-name="Charly" class="slider__card__btn">Learn more</button>
                 </div>
               </div>
 
@@ -132,19 +130,19 @@
                 <div class="slider__card" data-name="Katrine" onclick="openModal(this)">
                   <img class="slider__card__img" src="../assets/images/pets-katrine.png" alt="Katrine" />
                   <p class="slider__card__name">Katrine</p>
-                  <button class="slider__card__btn">Learn more</button>
+                  <button data-name="Katrine" class="slider__card__btn">Learn more</button>
                 </div>
 
                 <div class="slider__card slider__card768" data-name="Jennifer" onclick="openModal(this)">
                   <img class="slider__card__img" src="../assets/images/pets-jennifer.png" alt="Jennifer" />
                   <p class="slider__card__name">Jennifer</p>
-                  <button class="slider__card__btn">Learn more</button>
+                  <button  data-name="Jennifer" class="slider__card__btn">Learn more</button>
                 </div>
 
                 <div class="slider__card slider__card320" data-name="Woody" onclick="openModal(this)">
                   <img class="slider__card__img" src="../assets/images/pets-woody.png" alt="Woody" />
                   <p class="slider__card__name">Woody</p>
-                  <button class="slider__card__btn">Learn more</button>
+                  <button data-name="Woody" class="slider__card__btn">Learn more</button>
                 </div>
               </div>
 
@@ -153,32 +151,30 @@
                 <div class="slider__card" data-name="Scarlet" onclick="openModal(this)">
                   <img class="slider__card__img" src="../assets/images/pets-scarlet.png" alt="Scarlet" />
                   <p class="slider__card__name">Scarlet</p>
-                  <button class="slider__card__btn">Learn more</button>
+                  <button data-name="Scarlet" class="slider__card__btn">Learn more</button>
                 </div>
 
                 <div class="slider__card slider__card768" data-name="Freddie" onclick="openModal(this)">
                   <img class="slider__card__img" src="../assets/images/pets-freddie.png" alt="Freddie" />
                   <p class="slider__card__name">Freddie</p>
-                  <button class="slider__card__btn">Learn more</button>
+                  <button data-name="Freddie" class="slider__card__btn">Learn more</button>
                 </div>
 
                 <div class="slider__card slider__card320" data-name="Katrine" onclick="openModal(this)">
                   <img class="slider__card__img" src="../assets/images/pets-katrine.png" alt="Katrine" />
                   <p class="slider__card__name">Katrine</p>
-                  <button class="slider__card__btn">Learn more</button>
+                  <button data-name="Katrine" class="slider__card__btn">Learn more</button>
                 </div>
               </div>
             </div>
-            <button class="slider__btn slider__btn__right">
+            <button class="slider__btn slider__btn__right"  id="btn-right">
               <img src="../assets/icons/ArrowNext.png" alt="" />
             </button>
-          </div>
         </div>
 
         <div class="pets__btn">
           <a href="../pets/indexPets.html" class="pets__inner__btn">Get to know the rest</a>
         </div>
-      </div>
     </div>
   </div>
 
