@@ -63,11 +63,9 @@ function openModal(name) {
       let html = "";
       let pets = name.getAttribute("data-name");
       let p = data.find((el) => el.name === name.dataset.name);
-
       html += popup.classList.add("showPopup");
       document.querySelector(".popup__title").innerText = p.name;
       document.querySelector(".popup__img").src = p.img;
-
       document.querySelector(".popup__subtitle").innerText = p.breed;
       document.querySelector(".popup__text").innerText = p.description;
       document.querySelector(".popup-age").innerText = p.age;
