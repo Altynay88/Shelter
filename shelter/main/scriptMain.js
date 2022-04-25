@@ -38,17 +38,19 @@ const popupBtns = document.querySelectorAll(".slider__card");
 const closePopupBtn = document.querySelector(".popup__close");
 
 const popupViews = function () {
-  popup.classList.add("showPopup");
   document.body.classList.toggle("_lock");
+  popup.classList.add("showPopup");
   blockPage.classList.toggle("_active");
 };
 
 closePopupBtn.addEventListener("click", () => {
+  document.body.classList.remove("_lock");
   popup.classList.remove("showPopup");
   blockPage.classList.remove("_active");
 });
 
 popup.addEventListener("click", () => {
+  document.body.classList.remove("_lock");
   popup.classList.remove("showPopup");
   blockPage.classList.remove("_active");
 });
@@ -63,22 +65,19 @@ function openModal(name) {
   fetch("pets.json")
     .then((response) => response.json())
     .then((data) => {
-      document.body.classList.toggle("_lock");
+      document.body.classList.add("_lock");
       let html = "";
-      data.forEach((data) => {
-        let pets = name.getAttribute("data-name");
-        console.log(pets);
-        console.log(data);
-        html += popup.classList.add("showPopup");
-        document.querySelector(".popup__img").src = data.img;
-        document.querySelector(".popup__title").innerText = data.name;
-        document.querySelector(".popup__subtitle").innerText = data.breed;
-        document.querySelector(".popup__text").innerText = data.description;
-        document.querySelector(".popup-age").innerText = data.age;
-        document.querySelector(".popup-inoculations").innerText =
-          data.inoculations;
-        document.querySelector(".popup-diseases").innerText = data.diseases;
-        document.querySelector(".popup-parasites").innerText = data.parasites;
-      });
+      let pets = name.getAttribute("data-name");
+      let p = data.find((el) => el.name === name.dataset.name);
+      html += popup.classList.add("showPopup");
+      document.querySelector(".popup__title").innerText = p.name;
+      document.querySelector(".popup__img").src = p.img;
+
+      document.querySelector(".popup__subtitle").innerText = p.breed;
+      document.querySelector(".popup__text").innerText = p.description;
+      document.querySelector(".popup-age").innerText = p.age;
+      document.querySelector(".popup-inoculations").innerText = p.inoculations;
+      document.querySelector(".popup-diseases").innerText = p.diseases;
+      document.querySelector(".popup-parasites").innerText = p.parasites;
     });
 }
