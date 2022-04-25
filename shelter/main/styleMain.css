@@ -47,6 +47,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: rgba(41, 41, 41, 0.6);
+  overflow: hidden;
 }
 
 * {
@@ -303,6 +304,25 @@ body {
   display: flex;
   text-align: center;
   margin: 0 auto;
+  gap: 40px;
+}
+.pets .slider__outer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 82.5%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  overflow: hidden;
+  height: 470px;
+}
+.pets .slider__inner__wrapper :nth-child(1) {
+  left: -200%;
 }
 .pets .slider .slider__card {
   width: 270px;
@@ -657,6 +677,7 @@ body {
 }
 .popup.showPopup {
   display: inline-block;
+  overflow: hidden;
 }
 .popup__body {
   width: 900px;
@@ -673,7 +694,7 @@ body {
 }
 .popup__close {
   position: absolute;
-  right: 150px;
+  right: 130px;
   top: 10px;
   width: 50px;
   height: 50px;
