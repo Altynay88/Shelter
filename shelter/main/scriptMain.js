@@ -175,55 +175,79 @@ function openModal(name) {
 }
 
 // Slider //
+
 const BTN_LEFT = document.querySelector("#btn-left");
 const BTN_RIGHT = document.querySelector("#btn-right");
-const carousel = document.querySelector("#carousel");
+const CAROUSEL = document.querySelector("#carousel");
 const SLIDER_LEFT = document.querySelector("#slider_left");
 const SLIDER_RIGHT = document.querySelector("#slider_right");
 
-const moveLeft = () => {
-  carousel.classList.add("transition-left");
-  BTN_LEFT.removeEventListener("click", moveLeft);
-  BTN_RIGHT.removeEventListener("click", moveRight);
-};
-
-BTN_LEFT.addEventListener("click", moveLeft);
-
-const moveRight = () => {
-  carousel.classList.add("transition-right");
-  BTN_LEFT.removeEventListener("click", moveLeft);
-  BTN_RIGHT.removeEventListener("click", moveRight);
-};
-
-BTN_RIGHT.addEventListener("click", moveRight);
-
-carousel.addEventListener("animationend", (animationEvent) => {
-  let changedItem = SLIDER_LEFT;
-  if (animationEvent.animationName === "move-left") {
-    carousel.classList.remove("transition-left");
-    changedItem = SLIDER_RIGHT;
-    document.querySelector("#slider_active").innerHTML = SLIDER_RIGHT.innerHTML;
-
-    function createCard(i) {
-      const newCard = document.createElement("div");
-      newCard.classList.add("slider__card");
-      newCard.setAttribute("data-name", `${dataPets[i].name}`);
-      newCard.innerHTML = `
-                  <img class="slider__card__img" src='${dataPets[i].img}'/>
-                  <p class="slider__card__name">${dataPets[i].name}</p>
-                  <button data-name='${dataPets[i].name}'  class="slider__card__btn">Learn more</button>
-            `;
-      return newCard;
-    }
-
-    changedItem.innerHTML = "";
-    for (let i = 0; i < 3; i++) {
-      const card = createCard();
-      card.innerText = Math.floor(Math.random() * 8);
-      changedItem.appendChild(card);
-    }
-
-    BTN_LEFT.addEventListener("click", moveLeft);
-    BTN_RIGHT.addEventListener("click", moveRight);
-  }
+BTN_LEFT.addEventListener("click", () => {
+  CAROUSEL.classList.add("transition-left");
 });
+
+BTN_RIGHT.addEventListener("click", () => {
+  CAROUSEL.classList.add("transition-right");
+});
+
+CAROUSEL.addEventListener("animationend", (animationEvent) => {
+  if (animationEvent.animationName == "move-left") {
+    CAROUSEL.classList.remove("transition-left");
+    const leftItems = document.querySelector("#slider_left").innerHTML;
+    document.querySelector("#slider_left").innerHTML;
+    document.querySelector("#slider_active").innerHTML = leftItems;
+
+    const newSlider = document.createElement("div");
+    newSlider.setAttribute("data-name", `${dataPets.name}`);
+    newSlider.classList.add("slider__card");
+    newSlider.innerHTML = `
+                <img class="slider__card__img" '${dataPets.img}' alt="Sophia" />
+                  <p class="slider__card__name">${dataPets.name}</p>
+                  <button data-name='${dataPets.name}'class="slider__card__btn">Learn more</button>
+            `;
+
+    // SLIDER_LEFT.innerHTML = "";
+    // for (let i = 0; i < 3; i++) {
+    //   const card = createCard();
+    //   card.innerText = Math.floor(Math.random() * 8);
+    //   SLIDER_LEFT.appendChild(newSlider);
+    // }
+  } else {
+    CAROUSEL.classList.remove("transition-right");
+  }
+  CAROUSEL.classList.remove("transition-left");
+  CAROUSEL.classList.remove("transition-right");
+});
+
+// BTN_RIGHT.addEventListener("click", moveRight);
+
+// carousel.addEventListener("animationend", (animationEvent) => {
+//   let changedItem = SLIDER_LEFT;
+//   if (animationEvent.animationName === "move-left") {
+//     carousel.classList.remove("transition-left");
+//     changedItem = SLIDER_RIGHT;
+//     document.querySelector("#slider_active").innerHTML = SLIDER_RIGHT.innerHTML;
+
+// function createCard(i) {
+//   const newCard = document.createElement("div");
+//   newCard.classList.add("slider__card");
+//   newCard.setAttribute("data-name", `${dataPets[i].name}`);
+//   newCard.innerHTML = `
+//                   <img class="slider__card__img" src='${dataPets[i].img}'/>
+//                   <p class="slider__card__name">${dataPets[i].name}</p>
+//                   <button data-name='${dataPets[i].name}'  class="slider__card__btn">Learn more</button>
+//             `;
+//   return newCard;
+// }
+
+//     changedItem.innerHTML = "";
+//     for (let i = 0; i < 3; i++) {
+//       const card = createCard();
+//       card.innerText = Math.floor(Math.random() * 8);
+//       changedItem.appendChild(card);
+//     }
+
+//     BTN_LEFT.addEventListener("click", moveLeft);
+//     BTN_RIGHT.addEventListener("click", moveRight);
+//   }
+// });

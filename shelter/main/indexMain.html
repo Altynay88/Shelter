@@ -104,8 +104,9 @@
             <button class="slider__btn slider__btn__left" id="btn-left">
               <img src="../assets/icons/Arrow.png" alt="" />
             </button>
-            <div class="slider__outer__wrapper" id="carousel" >
-              <div class="slider__inner__wrapper" id="slider_left">
+            <div class="slider__wrapper">
+              <div class="carousel" id="carousel">
+              <div class="slider__item" id="slider_left">
                 <div class="slider__card" data-name="Sophia" onclick="openModal(this)">
                   <img class="slider__card__img" src="../assets/images/pets-sofia.png" alt="Sophia" />
                   <p class="slider__card__name">Sophia</p>
@@ -126,7 +127,7 @@
               </div>
 
 
-              <div class="slider__inner__wrapper" id="slider_active">
+              <div class="slider__item" id="slider_active">
                 <div class="slider__card" data-name="Katrine" onclick="openModal(this)">
                   <img class="slider__card__img" src="../assets/images/pets-katrine.png" alt="Katrine" />
                   <p class="slider__card__name">Katrine</p>
@@ -147,7 +148,7 @@
               </div>
 
 
-              <div class="slider__inner__wrapper" id="slider_right">
+              <div class="slider__item" id="slider_right">
                 <div class="slider__card" data-name="Scarlet" onclick="openModal(this)">
                   <img class="slider__card__img" src="../assets/images/pets-scarlet.png" alt="Scarlet" />
                   <p class="slider__card__name">Scarlet</p>
@@ -167,9 +168,11 @@
                 </div>
               </div>
             </div>
+            </div>
             <button class="slider__btn slider__btn__right"  id="btn-right">
               <img src="../assets/icons/ArrowNext.png" alt="" />
             </button>
+            
         </div>
 
         <div class="pets__btn">

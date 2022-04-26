@@ -295,16 +295,21 @@ body {
     &__btn:hover {
       background-color: $pink-primary;
     }
-    .slider__outer__wrapper {
-      display: flex;
-      width: 990px;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
+    &__wrapper {
+      height: 500px;
       overflow: hidden;
-      height: 470px;
+      margin: 0 auto;
+      width: 1100px;
     }
-    .slider__inner__wrapper {
+
+    .carousel {
+      position: relative;
+      padding-left: 55px;
+      left: 0;
+      display: flex;
+      gap: 90px;
+    }
+    .slider__item {
       display: flex;
       width: 100%;
       justify-content: center;
@@ -314,10 +319,10 @@ body {
       left: 0;
       transition: 0.3s;
     }
-    .slider__inner__wrapper:nth-child(1) {
+    .slider__item:nth-child(1) {
       left: -110%;
     }
-    .slider__inner__wrapper:nth-child(3) {
+    .slider__item:nth-child(3) {
       left: 110%;
     }
 
@@ -388,7 +393,7 @@ body {
 
 @keyframes move-right {
   from {
-    left: -990px;
+    left: -1120px;
   }
   to {
     left: 0px;
@@ -402,10 +407,10 @@ body {
 
 @keyframes move-left {
   from {
-    left: -990px;
+    left: 0px;
   }
   to {
-    left: 0px;
+    left: -1120px;
   }
 }
 
@@ -815,6 +820,7 @@ body {
       width: 100%;
       padding: 60px 0;
       position: relative;
+      gap: 0;
       .slider__outer__wrapper {
         width: 650px;
       }
