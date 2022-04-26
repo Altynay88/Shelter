@@ -1237,7 +1237,7 @@ body {
   }
   .pets .slider {
     display: block;
-    width: 350px;
+    width: 300px;
     padding-bottom: 37px;
   }
   .pets .slider .slider__card {
