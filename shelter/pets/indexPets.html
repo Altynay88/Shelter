@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylePets.css" />
+    <link rel="stylesheet" href="stylePets.scss" />
+    <title>Document</title>
+  </head>
+
+  <body class="body">
+    <!--HEADER-->
+    <div class="block-page"></div>
+    <header class="header">
+      <div class="container">
+        <div class="header__logo">
+          <a href="../main/indexMain.html">
+            <h1 class="header__title">Cozy House</h1>
+          </a>
+          <p class="header__logo-subtitle">Shelter for pets in Boston</p>
+        </div>
+        <div class="burger">
+          <div class="burger-bar1"></div>
+          <div class="burger-bar2"></div>
+          <div class="burger-bar3"></div>
+        </div>
+        <nav class="nav">
+            <div class="burger__logo">
+          <a href="../main/indexMain.html">
+            <h1 class="header__title">Cozy House</h1>
+          </a>
+          <p class="header__logo-subtitle">Shelter for pets in Boston</p>
+        </div>
+          <ul>
+            <li>
+              <a class="nav__link" href="../main/indexMain.html"
+                >About the shelter</a
+              >
+            </li>
+            <li><a class="nav__link-active" href="#">Our pets</a></li>
+            <li>
+              <a data-goto=".help" class="nav__link" href="#help"
+                >Help the shelter</a
+              >
+            </li>
+            <li>
+              <a data-goto=".footer" class="nav__link" href="#contacts"
+                >Contacts</a
+              >
+            </li>
+          </ul>
+        </nav>
+          </div>
+      </div>
+    </header>
+
+    <!--MAIN-->
+    <main>
+      <div class="pets">
+        <div class="container">
+          <div class="pets__inner">
+            <h3 class="pets__heading">
+              Our friends who
+              <h3 class="pets__heading">are looking for a house</h3>
+            </h3>
+
+            <div class="pets__cards__container">
+              <div class="card" data-name="Katrine" onclick="openModal(this)">
+                <img
+                  class="card__img"
+                  src="../assets/images/pets-katrine.png"
+                  alt="Katrine"
+                />
+                <p class="card__name">Katrine</p>
+                <button class="card__btn">Learn more</button>
+              </div>
+
+              <div class="card" data-name="Jennifer" onclick="openModal(this)">
+                <img
+                  class="card__img"
+                  src="../assets/images/pets-jennifer.png"
+                  alt="Jennifer"
+                />
+                <p class="card__name">Jennifer</p>
+                <button class="card__btn">Learn more</button>
+              </div>
+
+              <div class="card" data-name="Woody" onclick="openModal(this)">
+                <img
+                  class="card__img"
+                  src="../assets/images/pets-woody.png"
+                  alt="Woody"
+                />
+                <p class="card__name">Woody</p>
+                <button class="card__btn">Learn more</button>
+              </div>
+
+              <div class="card" data-name="Sophia" onclick="openModal(this)">
+                <img
+                  class="card__img"
+                  src="../assets/images/pets-sofia.png"
+                  alt="Sophia"
+                />
+                <p class="card__name">Sophia</p>
+                <button class="card__btn">Learn more</button>
+              </div>
+
+              <div class="card" data-name="Timmy" onclick="openModal(this)">
+                <img
+                  class="card__img"
+                  src="../assets/images/pets-timmy.png"
+                  alt="Timmy"
+                />
+                <p class="card__name">Timmy</p>
+                <button class="card__btn">Learn more</button>
+              </div>
+
+              <div class="card" data-name="Charly" onclick="openModal(this)">
+                <img
+                  class="card__img"
+                  src="../assets/images/pets-charly.png"
+                  alt="Charly"
+                />
+                <p class="card__name">Charly</p>
+                <button class="card__btn">Learn more</button>
+              </div>
+
+              <div class="card" data-name="Scarlet" onclick="openModal(this)">
+                <img
+                  class="card__img"
+                  src="../assets/images/pets-scarlet.png"
+                  alt="Scarlet"
+                />
+                <p class="card__name">Scarlet</p>
+                <button class="card__btn">Learn more</button>
+              </div>
+
+              <div class="card" data-name="Freddie" onclick="openModal(this)">
+                <img
+                  class="card__img"
+                  src="../assets/images/pets-freddie.png"
+                  alt="Freddie"
+                />
+                <p class="card__name">Freddie</p>
+                <button class="card__btn">Learn more</button>
+              </div>
+            </div>
+
+            <div class="navigation">
+              <div class="navigation__btns">
+                <button disabled class="navigation__btn">
+                  <img src="../assets/icons/arrow-two.png" alt="" />
+                </button>
+                <button disabled class="navigation__btn">
+                  <img src="../assets/icons/arrow-one.png" alt="" />
+                </button>
+                <button class="navigation__btn__number">1</button>
+                <button class="navigation__btn__next">
+                  <img src="../assets/icons/arrow-one-next.png" alt="" />
+                </button>
+                <button class="navigation__btn__next">
+                  <img src="../assets/icons/arrow-two-next.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+     <!-- POPUP-->
+    <div id="popup" class="popup">
+                <button class="popup__close"></button>
+      <div class="popup__body">
+        <img class="popup__img"></img>
+        <div class="popup__content">
+          <div class="popup__title"></div>
+          <div class="popup__subtitle"></div>
+          <div class="popup__text"></div>
+          <ul>
+            <li>Age: <span class="popup-age"></span></li>
+            <li>Inoculations: <span class="popup-inoculations"></span></li>
+            <li> Diseases: <span class="popup-diseases">  </span></li>
+            <li> Parasites: <span class="popup-parasites"></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!--FOOTER-->
+    <footer>
+      <div class="footer">
+        <a name="contacts"></a>
+        <div class="container">
+          <div class="footer__contacts">
+            <h3 class="footer__title">For questions and suggestions</h3>
+            <a class="footer__mail__text" href="mailto:   email@shelter.com">
+              email@shelter.com</a
+            >
+            <a class="footer__phone__text" href="tel:+13 674 567 75 54">
+              +13 674 567 75 54</a
+            >
+          </div>
+          <div class="footer__location">
+            <h3 class="footer__title">We are waiting for your visit</h3>
+            <a
+              class="footer__location__text"
+              href="https://www.google.com/maps/"
+            >
+              1 Central Street, Boston (entrance from the store)
+            </a>
+            <a
+              class="footer__location__text footer__location__textLondon"
+              href="https://www.google.com/maps/"
+            >
+              18 South Park, London
+            </a>
+          </div>
+          <div class="footer__img"></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="scriptPets.js"></script>
+</html>
